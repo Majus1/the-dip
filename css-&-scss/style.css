@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "pp_neue_montrealbold";
+  src: url("../neue-montreal/ppneuemontreal-bold-webfont.woff2") format("woff2"), url("../neue-montreal/ppneuemontreal-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "pp_neue_montrealbook";
+  src: url("../neue-montreal/ppneuemontreal-book-webfont.woff2") format("woff2"), url("../neue-montreal/ppneuemontreal-book-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "pp_neue_montrealmedium";
+  src: url("../neue-montreal/ppneuemontreal-medium-webfont.woff2") format("woff2"), url("../neue-montreal/ppneuemontreal-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.display-3 {
+  font-size: 64px;
+  font-family: "pp_neue_montrealbook";
+}
+
+.display-6 {
+  font-size: 36px;
+  font-family: "pp_neue_montrealbook";
+}
+
+.lead-3 {
+  font-size: 18px;
+  font-family: "pp_neue_montrealmedium";
+}
+
+p {
+  font-size: 16px;
+  font-family: "pp_neue_montrealbook";
+}/*# sourceMappingURL=style.css.map */
