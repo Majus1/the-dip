@@ -31,7 +31,51 @@
   font-family: "pp_neue_montrealmedium";
 }
 
-p {
+.body-1 {
   font-size: 16px;
   font-family: "pp_neue_montrealbook";
+}
+
+button {
+  border: none;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+}
+
+button:hover {
+  transition: 2000;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+
+.gate button {
+  width: 178px;
+  height: 178px;
+  border-radius: 100%;
+}
+
+.go-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gate {
+  position: relative;
+}
+
+.go-button {
+  position: absolute;
+  top: 431px;
+  left: 8px;
+}
+
+.vertical-text {
+  color: #000000;
+  position: absolute;
+  rotate: 90deg;
+  top: 174px;
+  left: -145px;
 }/*# sourceMappingURL=style.css.map */
