@@ -33,6 +33,10 @@
     font-size: 64px;
     font-family: 'pp_neue_montrealbook';
 }
+.display-5 {
+    font-size: 42px;
+    font-family: 'pp_neue_montrealbook';
+}
 .display-6 {
     font-size: 36px;
     font-family: 'pp_neue_montrealbook';
@@ -44,6 +48,10 @@
 .body-1 {
     font-size: 16px;
     font-family: 'pp_neue_montrealbook';
+}
+.body-1-bold {
+    font-size: 16px;
+    font-family: 'pp_neue_montrealmedium';
 }
 // ::::: Font styling :::::
 
@@ -73,8 +81,33 @@ button:hover {
 // ::::: Input styling :::::
 
 // ::::: Enterance page styling :::::
+body {
+    margin: 0px;
+    padding: 0px;
+}
+.content-wrapper-dip {
+    margin: 96px 0;
+}
+.introductions {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 24px;
+    .text-line-1,
+    .text-line-2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 48px;
+        margin: 0px;
+    }
+    h1 {
+        padding: 0px;
+        margin: 0px;
+    }
+}
 .gate {
     position: relative;
+    margin: 0 48px;
 }
 .go-button {
     position: absolute;
@@ -87,5 +120,38 @@ button:hover {
     rotate: 90deg;
     top: 174px;
     left: -145px;
+}
+.text-block-1 {
+    position: absolute;
+    left: 188px;
+    top: 291px;
+    p {
+        padding: 0px;
+        margin: 0px;
+    }
+    .body-1-bold {
+        text-align: right;
+    }
+}
+.fpl-02 {
+    position: absolute;
+    left: 315px;
+}
+.circle-group-1 {
+    position: absolute;
+    top: -144px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+.circle-group-2 {
+    position: absolute;
+    top: 84px;
+    left: 90px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 16px;
 }
 // ::::: Enterance page styling :::::
