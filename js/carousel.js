@@ -5,15 +5,15 @@ let isDragStart = false, prevPageX, prevScrollLeft;;
 const dragStart = (e) => {
     // Updatig global variables on mouse down event
     isDragStart = true;
-    prevPageX = e.pageX;
+    prevPageX = e.pageX || e.touches[0].pageX;
     prevScrollLeft = carousel.scrollLeft;
 }
 
 const dragging = (e) => {
     // scrolling images/carousel to left according to mouse ponter.
     if(!isDragStart) return;
-    e.preventDefault();
-    let positionDiff = e.pageX - prevPageX;
+    e.preventDefault(); 
+    let positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
     carousel.scrollLeft = prevScrollLeft - positionDiff;
 }
 
@@ -22,6 +22,11 @@ const dragStop = () => {
 }
 
 carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("touchstart", dragStart);
+
 carousel.addEventListener("mousemove", dragging);
+carousel.addEventListener("touchmove", dragging);
+
 carousel.addEventListener("mouseup", dragStop);
 carousel.addEventListener("mouseleave", dragStop);
+carousel.addEventListener("touchend", dragStop);
