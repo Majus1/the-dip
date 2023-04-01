@@ -98,6 +98,7 @@ button:hover {
 body {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 .content-wrapper-dip {
     margin: 48px 0;
@@ -169,3 +170,23 @@ body {
     gap: 16px;
 }
 // ::::: Enterance page styling :::::
+
+// ::::: Carousel styling :::::
+
+.workout-selector .carousel {
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.carousel img {
+    height: 275px;
+    width: calc(100% / 1);
+    // object-fit: cover;
+}
+
+.carousel img:first-child {
+    margin-left: 0px;
+}
+// ::::: Carousel styling :::::

@@ -87,6 +87,7 @@ button:hover {
 body {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 
 .content-wrapper-dip {
@@ -165,4 +166,20 @@ body {
   flex-direction: column-reverse;
   align-items: center;
   gap: 16px;
+}
+
+.workout-selector .carousel {
+  font-size: 0px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.carousel img {
+  height: 275px;
+  width: 100%;
+}
+
+.carousel img:first-child {
+  margin-left: 0px;
 }/*# sourceMappingURL=style.css.map */
