@@ -14,13 +14,13 @@ const dotPossitionCheck = () => {
         // Removes filled in dot form all indicator dots
         let indicatorDots = document.querySelectorAll(".dot");
         for (i=0; i< indicatorDots.length; i++) {
-            indicatorDots[i].classList.add("inactivated-dot");
+            indicatorDots[i].classList.add("inactivated-content");
         }
 
         // Makes dot coresponting to the counterValue active
         workoutOption = document.querySelector("#first-dot");
-        workoutOption.classList.add("activated-dot");
-        workoutOption.classList.remove("inactivated-dot");
+        workoutOption.classList.add("activated-content");
+        workoutOption.classList.remove("inactivated-content");
 
         return
 
@@ -29,13 +29,13 @@ const dotPossitionCheck = () => {
         // Removes filled in dot form all indicator dots
         let indicatorDots = document.querySelectorAll(".dot");
         for (i=0; i< indicatorDots.length; i++) {
-            indicatorDots[i].classList.add("inactivated-dot");
+            indicatorDots[i].classList.add("inactivated-content");
         }
 
         // Makes dot coresponting to the counterValue active
         workoutOption = document.querySelector("#second-dot");
-        workoutOption.classList.add("activated-dot");
-        workoutOption.classList.remove("inactivated-dot");
+        workoutOption.classList.add("activated-content");
+        workoutOption.classList.remove("inactivated-content");
 
         return
 
@@ -44,13 +44,13 @@ const dotPossitionCheck = () => {
         // Removes filled in dot form all indicator dots
         let indicatorDots = document.querySelectorAll(".dot");
         for (i=0; i< indicatorDots.length; i++) {
-            indicatorDots[i].classList.add("inactivated-dot");
+            indicatorDots[i].classList.add("inactivated-content");
         }
 
         // Makes dot coresponting to the counterValue active
         workoutOption = document.querySelector("#third-dot");
-        workoutOption.classList.add("activated-dot");
-        workoutOption.classList.remove("inactivated-dot");
+        workoutOption.classList.add("activated-content");
+        workoutOption.classList.remove("inactivated-content");
 
         return
 
@@ -59,13 +59,13 @@ const dotPossitionCheck = () => {
         // Removes filled in dot form all indicator dots
         let indicatorDots = document.querySelectorAll(".dot");
         for (i=0; i< indicatorDots.length; i++) {
-            indicatorDots[i].classList.add("inactivated-dot");
+            indicatorDots[i].classList.add("inactivated-content");
         }
 
         // Makes dot coresponting to the counterValue active
         workoutOption = document.querySelector("#fourth-dot");
-        workoutOption.classList.add("activated-dot");
-        workoutOption.classList.remove("inactivated-dot");
+        workoutOption.classList.add("activated-content");
+        workoutOption.classList.remove("inactivated-content");
 
         return
     }

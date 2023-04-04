@@ -196,17 +196,17 @@ body {
   margin: 0px;
 }
 
-.activated-dot .inactive-dot {
+.activated-content .inactive-dot {
   display: none;
 }
-.activated-dot .active-dot {
+.activated-content .active-dot {
   display: block;
 }
 
-.inactivated-dot .inactive-dot {
+.inactivated-content .inactive-dot {
   display: block;
 }
-.inactivated-dot .active-dot {
+.inactivated-content .active-dot {
   display: none;
 }
 
@@ -225,6 +225,7 @@ body {
 .workout-desc p {
   padding: 0px;
   margin: 0px;
+  text-align: justify;
 }
 .workout-desc button {
   border-radius: 50px;

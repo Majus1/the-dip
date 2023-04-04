@@ -204,7 +204,7 @@ body {
     }
 }
 
-.activated-dot {
+.activated-content {
     .inactive-dot {
         display: none;
     }
@@ -213,7 +213,7 @@ body {
     }
 }
 
-.inactivated-dot {
+.inactivated-content {
     .inactive-dot {
         display: block;
     }
@@ -238,6 +238,7 @@ body {
     p {
         padding: 0px;
         margin: 0px;
+        text-align: justify;
     }
     button {
         border-radius: 50px;
