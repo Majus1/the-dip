@@ -192,6 +192,37 @@ body {
 }
 // ::::: Carousel styling :::::
 
+// ::::: Indicator dots :::::
+.indicator-dots {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: center;
+    .dot {
+        padding: 0px;
+        margin: 0px;
+    }
+}
+
+.activated-dot {
+    .inactive-dot {
+        display: none;
+    }
+    .active-dot {
+        display: block;
+    }
+}
+
+.inactivated-dot {
+    .inactive-dot {
+        display: block;
+    }
+    .active-dot {
+        display: none;
+    }
+}
+// ::::: Indicator dots :::::
+
 // ::::: Workout description :::::
 .workout-desc {
     display: flex;

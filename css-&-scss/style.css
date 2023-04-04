@@ -185,6 +185,31 @@ body {
   margin-left: 0px;
 }
 
+.indicator-dots {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  justify-content: center;
+}
+.indicator-dots .dot {
+  padding: 0px;
+  margin: 0px;
+}
+
+.activated-dot .inactive-dot {
+  display: none;
+}
+.activated-dot .active-dot {
+  display: block;
+}
+
+.inactivated-dot .inactive-dot {
+  display: block;
+}
+.inactivated-dot .active-dot {
+  display: none;
+}
+
 .workout-desc {
   display: flex;
   flex-direction: row;
