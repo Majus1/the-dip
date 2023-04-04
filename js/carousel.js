@@ -1,6 +1,25 @@
 const carousel = document.querySelector(".carousel");
 
-let isDragStart = false, prevPageX, prevScrollLeft;;
+let isDragStart = false, prevPageX, prevScrollLeft, positionDiff;
+
+const autoSlide = () => {
+    // if there is no image left to scroll then return from here.
+    if(carousel.scrollLeft == (carousel.scrollWidth - carousel.clientWidth)) return;
+
+    positionDiff = Math.abs(positionDiff) // making position Diff alue to positive
+    let firstImgWidth = 428; // this value is hard coded but it shouldent be.
+    // getting difference value that needs to add or reduce from carousel left to make middle image center
+    let valDifference = firstImgWidth - positionDiff;
+    
+    if (carousel.scrollLeft > prevScrollLeft) {
+        // if user is scrolling to the right
+        return carousel.scrollLeft += positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
+    } else {
+        // if user is scrolling to the left
+        carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
+    }
+    console.log ("user is scrolling to the left ");
+}
 
 const dragStart = (e) => {
     // Updatig global variables on mouse down event
@@ -13,12 +32,13 @@ const dragging = (e) => {
     // scrolling images/carousel to left according to mouse ponter.
     if(!isDragStart) return;
     e.preventDefault(); 
-    let positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
+    positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
     carousel.scrollLeft = prevScrollLeft - positionDiff;
 }
 
 const dragStop = () => {
     isDragStart = false;
+    autoSlide();
 }
 
 carousel.addEventListener("mousedown", dragStart);
@@ -30,3 +50,7 @@ carousel.addEventListener("touchmove", dragging);
 carousel.addEventListener("mouseup", dragStop);
 carousel.addEventListener("mouseleave", dragStop);
 carousel.addEventListener("touchend", dragStop);
+
+// ::::: Resources :::::
+// https://www.youtube.com/watch?v=7HPsdVQhpRw
+// ::::: Resources :::::
