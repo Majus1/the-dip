@@ -22,8 +22,12 @@ const autoSlide = () => {
         return carousel.scrollLeft += positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
     } else {
         // if user is scrolling to the left
-        Math.abs(counterValue) -= 1; // subtracts one from the counter
-        console.log(`User scrolled left and the value of counterValue is ${counterValue}`);
+        if (counterValue === 0) {
+            console.log(`User scrolled left but value cannot be negative`);
+        } else {
+            counterValue -= 1;
+            console.log(`User scrolled left and the value of counterValue is ${counterValue}`);
+        }
         carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
     }
 }
