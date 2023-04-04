@@ -1,6 +1,10 @@
+// ::::: The workout option slider :::::
+// ::: Makes carousell scrollable :::::
 const carousel = document.querySelector(".carousel");
 
 let isDragStart = false, prevPageX, prevScrollLeft, positionDiff;
+
+let counterValue = 0 // Sets the value of the counter
 
 const autoSlide = () => {
     // if there is no image left to scroll then return from here.
@@ -13,12 +17,15 @@ const autoSlide = () => {
     
     if (carousel.scrollLeft > prevScrollLeft) {
         // if user is scrolling to the right
+        counterValue += 1; // adds one from the counter
+        console.log(`User scrolled right and the value of counterValue is ${counterValue}`);
         return carousel.scrollLeft += positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
     } else {
         // if user is scrolling to the left
+        Math.abs(counterValue) -= 1; // subtracts one from the counter
+        console.log(`User scrolled left and the value of counterValue is ${counterValue}`);
         carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
     }
-    console.log ("user is scrolling to the left ");
 }
 
 const dragStart = (e) => {
@@ -54,3 +61,11 @@ carousel.addEventListener("touchend", dragStop);
 // ::::: Resources :::::
 // https://www.youtube.com/watch?v=7HPsdVQhpRw
 // ::::: Resources :::::
+
+// ::: Makes carousell scrollable :::
+
+// ::: indicator dot logic :::
+
+// ::: indicator dot logic :::
+
+// ::::: The workout option slider :::::

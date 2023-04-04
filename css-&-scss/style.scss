@@ -48,6 +48,7 @@
 .body-1 {
     font-size: 16px;
     font-family: 'pp_neue_montrealbook';
+    line-height: 1.5;
 }
 .body-1-bold {
     font-size: 16px;
@@ -190,3 +191,25 @@ body {
     margin-left: 0px;
 }
 // ::::: Carousel styling :::::
+
+// ::::: Workout description :::::
+.workout-desc {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 24px;
+    gap: 48px;
+    .text-block {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    h1,
+    p {
+        padding: 0px;
+        margin: 0px;
+    }
+    button {
+        border-radius: 50px;
+    }
+}
+// ::::: Workout description :::::
