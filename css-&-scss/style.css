@@ -92,7 +92,7 @@ body {
 }
 
 .content-wrapper-dip {
-  margin: 48px 0;
+  margin: 24px 0;
 }
 
 .introductions {
@@ -183,6 +183,25 @@ body {
 
 .carousel img:first-child {
   margin-left: 0px;
+}
+
+.vertical-crop-mark-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.vertical-crop-mark-wrapper .top-crop-mark {
+  padding-bottom: 32px;
+}
+.vertical-crop-mark-wrapper .bottom-crop-mark {
+  padding-top: 32px;
+}
+
+.horizontal-crop-mark-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 24px;
+  position: relative;
+  top: 140px;
 }
 
 .indicator-dots {

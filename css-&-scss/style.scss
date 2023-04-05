@@ -102,7 +102,7 @@ body {
     box-sizing: border-box;
 }
 .content-wrapper-dip {
-    margin: 48px 0;
+    margin: 24px 0;
 }
 .introductions {
     display: flex;
@@ -173,7 +173,6 @@ body {
 // ::::: Enterance page styling :::::
 
 // ::::: Carousel styling :::::
-
 .workout-selector .carousel {
     font-size: 0px;
     cursor: pointer;
@@ -191,6 +190,26 @@ body {
     margin-left: 0px;
 }
 // ::::: Carousel styling :::::
+
+// ::::: Crop marks :::::
+.vertical-crop-mark-wrapper {
+    display: flex;
+    justify-content: center;
+    .top-crop-mark {
+        padding-bottom: 32px;
+    }
+    .bottom-crop-mark {
+        padding-top: 32px;
+    }
+}
+.horizontal-crop-mark-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    position: relative;
+    top: 140px;
+}
+// ::::: Crop marks :::::
 
 // ::::: Indicator dots :::::
 .indicator-dots {
