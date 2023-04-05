@@ -6,21 +6,31 @@ to allow the user a good navigation experience while
 using the application.
 */
 
-let indicatorDots = document.querySelectorAll(".dot");
+// let indicatorDots = document.querySelectorAll(".dot");
 
 const dotPossitionCheck = () => {
     if (counterValue === 0) {
         
         // Removes filled in dot form all indicator dots
         let indicatorDots = document.querySelectorAll(".dot");
+        let workoutDesc = document.querySelectorAll(".workout-desc");
         for (i=0; i< indicatorDots.length; i++) {
             indicatorDots[i].classList.add("inactivated-content");
         }
+        for (z=0; z< workoutDesc.length; z++) {
+            workoutDesc[z].classList.add("inactive-workout-desc");
+            workoutDesc[z].classList.remove("active-workout-desc");
+        }
 
         // Makes dot coresponting to the counterValue active
-        workoutOption = document.querySelector("#first-dot");
-        workoutOption.classList.add("activated-content");
-        workoutOption.classList.remove("inactivated-content");
+        currentDot = document.querySelector("#first-dot");
+        currentDot.classList.add("activated-content");
+        currentDot.classList.remove("inactivated-content");
+
+        // Makes dot coresponting to the workout description active
+        currentDesc = document.querySelector("#thePush");
+        currentDesc.classList.add("active-workout-desc");
+        currentDesc.classList.remove("inactive-workout-desc");
 
         return
 
@@ -28,8 +38,13 @@ const dotPossitionCheck = () => {
         
         // Removes filled in dot form all indicator dots
         let indicatorDots = document.querySelectorAll(".dot");
+        let workoutDesc = document.querySelectorAll(".workout-desc");
         for (i=0; i< indicatorDots.length; i++) {
             indicatorDots[i].classList.add("inactivated-content");
+        }
+        for (z=0; z< workoutDesc.length; z++) {
+            workoutDesc[z].classList.add("inactive-workout-desc");
+            workoutDesc[z].classList.remove("active-workout-desc");
         }
 
         // Makes dot coresponting to the counterValue active
@@ -37,14 +52,24 @@ const dotPossitionCheck = () => {
         workoutOption.classList.add("activated-content");
         workoutOption.classList.remove("inactivated-content");
 
+        // Makes dot coresponting to the workout description active
+        currentDesc = document.querySelector("#thePull");
+        currentDesc.classList.add("active-workout-desc");
+        currentDesc.classList.remove("inactive-workout-desc");
+
         return
 
     } else if (counterValue === 2) {
         
         // Removes filled in dot form all indicator dots
         let indicatorDots = document.querySelectorAll(".dot");
+        let workoutDesc = document.querySelectorAll(".workout-desc");
         for (i=0; i< indicatorDots.length; i++) {
             indicatorDots[i].classList.add("inactivated-content");
+        }
+        for (z=0; z< workoutDesc.length; z++) {
+            workoutDesc[z].classList.add("inactive-workout-desc");
+            workoutDesc[z].classList.remove("active-workout-desc");
         }
 
         // Makes dot coresponting to the counterValue active
@@ -52,20 +77,35 @@ const dotPossitionCheck = () => {
         workoutOption.classList.add("activated-content");
         workoutOption.classList.remove("inactivated-content");
 
+        // Makes dot coresponting to the workout description active
+        currentDesc = document.querySelector("#theLegs");
+        currentDesc.classList.add("active-workout-desc");
+        currentDesc.classList.remove("inactive-workout-desc");
+
         return
 
     } else if (counterValue === 3) {
         
         // Removes filled in dot form all indicator dots
         let indicatorDots = document.querySelectorAll(".dot");
+        let workoutDesc = document.querySelectorAll(".workout-desc");
         for (i=0; i< indicatorDots.length; i++) {
             indicatorDots[i].classList.add("inactivated-content");
+        }
+        for (z=0; z< workoutDesc.length; z++) {
+            workoutDesc[z].classList.add("inactive-workout-desc");
+            workoutDesc[z].classList.remove("active-workout-desc");
         }
 
         // Makes dot coresponting to the counterValue active
         workoutOption = document.querySelector("#fourth-dot");
         workoutOption.classList.add("activated-content");
         workoutOption.classList.remove("inactivated-content");
+
+        // Makes dot coresponting to the workout description active
+        currentDesc = document.querySelector("#theLegsPt2");
+        currentDesc.classList.add("active-workout-desc");
+        currentDesc.classList.remove("inactive-workout-desc");
 
         return
     }

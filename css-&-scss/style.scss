@@ -224,11 +224,16 @@ body {
 // ::::: Indicator dots :::::
 
 // ::::: Workout description :::::
-.workout-desc {
+.inactive-workout-desc {
+    display: none;
+}
+.active-workout-desc {
     display: flex;
+}
+.workout-desc {
     flex-direction: row;
     padding: 0px 24px;
-    gap: 48px;
+    gap: 48px; 
     .text-block {
         display: flex;
         flex-direction: column;
