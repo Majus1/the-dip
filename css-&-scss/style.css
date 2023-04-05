@@ -209,6 +209,7 @@ body {
   flex-direction: row;
   gap: 24px;
   justify-content: center;
+  padding: 48px 0px;
 }
 .indicator-dots .dot {
   padding: 0px;
