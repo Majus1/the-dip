@@ -16,9 +16,15 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "pp_neue_montrealthin";
+  src: url("../neue-montreal/ppneuemontreal-thin-webfont.woff2") format("woff2"), url("../neue-montreal/ppneuemontreal-thin-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 .display-3 {
   font-size: 64px;
-  font-family: "pp_neue_montrealbook";
+  font-family: "pp_neue_montrealthin";
 }
 
 .display-5 {
