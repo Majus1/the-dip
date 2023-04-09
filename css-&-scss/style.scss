@@ -383,10 +383,25 @@ body {
     }
 }
 .previous-workout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
     .previous-stats {
         display: flex;
         flex-direction: row;
-
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+    }
+    .section-crop-marks {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 380px;
+        position: relative;
+        bottom: 47px;
     }
     p,
     h1 {
