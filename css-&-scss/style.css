@@ -139,7 +139,7 @@ body {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  background: blue;
+  background: transparent;
   min-height: 100vh;
 }
 
@@ -310,7 +310,7 @@ body {
   border-radius: 50px;
 }
 
-.workout-option {
+.date-and-time-option {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -318,7 +318,7 @@ body {
   height: 100vh;
   padding: 0 24px;
 }
-.workout-option .start-button {
+.date-and-time-option .start-button {
   display: flex;
   flex-grow: 1;
   align-items: center;
@@ -334,7 +334,7 @@ body {
   flex-grow: 1;
 }
 
-.workout-tittle-wrapper h1 {
+.date-and-time-tittle-wrapper h1 {
   margin: 0px;
 }
 
@@ -354,5 +354,45 @@ body {
 .date-and-time h1,
 .date-and-time p {
   padding: 0px;
+  margin: 0px;
+}
+
+.workout-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  height: 100vh;
+  padding: 0 24px;
+}
+
+.current-workout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+}
+.current-workout .wnr-forum {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+.current-workout h1,
+.current-workout p {
+  padding: 0px;
+  margin: 0px;
+}
+
+.previous-workout .previous-stats {
+  display: flex;
+  flex-direction: row;
+}
+.previous-workout p,
+.previous-workout h1 {
+  padding: 0px;
+  padding: 0px;
+  margin: 0px;
   margin: 0px;
 }/*# sourceMappingURL=style.css.map */

@@ -132,7 +132,7 @@ body {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    background: blue;
+    background: transparent;
     min-height: 100vh;
 }
 .content-wrapper-dip {
@@ -305,8 +305,8 @@ body {
 }
 // ::::: Workout description :::::
 
-// ::::: The workout page :::::
-.workout-option {
+// ::::: Date and time page :::::
+.date-and-time-option {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -329,7 +329,7 @@ body {
     flex-grow: 1;
 }
 
-.workout-tittle-wrapper {
+.date-and-time-tittle-wrapper {
     h1 {
         margin: 0px;
     }
@@ -353,4 +353,47 @@ body {
         margin: 0px;
     }
 }
-// ::::: The workout page :::::
+// ::::: Date and time page :::::
+
+// ::::: The workout :::::
+.workout-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    height: 100vh;
+    padding: 0 24px;
+}
+.current-workout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+    .wnr-forum {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        width: 100%;
+    }
+    h1,
+    p {
+        padding: 0px;
+        margin: 0px;
+    }
+}
+.previous-workout {
+    .previous-stats {
+        display: flex;
+        flex-direction: row;
+
+    }
+    p,
+    h1 {
+        padding: 0px;
+        padding: 0px;
+        margin: 0px;
+        margin: 0px;
+    }
+}
+// ::::: The workout :::::
