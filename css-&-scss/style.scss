@@ -140,12 +140,20 @@ body {
 }
 
 .content-wrapper-dip {
-    margin: 24px 0;
+    // margin: 24px 0;
     // height: 100vh;
 }
 
 #entry-screen {
     margin: 48px 0px;
+}
+
+#workout-option-screen {
+    margin-top: 24px;
+}
+
+#date-and-time-screen {
+    height: 100vh;
 }
 
 .introductions {
@@ -317,7 +325,6 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 24px;
-    height: 100vh;
     padding: 0 24px;
     .start-button {
         display: flex;
@@ -327,6 +334,12 @@ body {
         gap: 4px;
         width: 100%;
         border-radius: 24px;
+    }
+    .top-crop-mark {
+        padding-top: 24px;
+    }
+    .bottom-crop-mark {
+        padding-bottom: 24px;
     }
 }
 .start-button-wrapper {
