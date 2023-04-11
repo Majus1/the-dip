@@ -25,8 +25,8 @@
 
 @font-face {
     font-family: 'pp_neue_montrealthin';
-    src: url('../neue-montreal/ppneuemontreal-thin-webfont.woff2') format('woff2'),
-         url('../neue-montreal/ppneuemontreal-thin-webfont.woff') format('woff');
+    src: url('../neue-montreal/PPNeueMontreal-Thin.woff2') format('woff2'),
+         url('../neue-montreal/PPNeueMontreal-Thin.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -364,7 +364,13 @@ body {
     height: 100vh;
     padding: 0 24px;
 }
-.current-workout {
+
+.workout-tittle-wrapper h1 {
+    padding: 0px;
+    margin: 0px;
+}
+
+.current-workout-input-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -382,12 +388,15 @@ body {
         margin: 0px;
     }
 }
+
+.current-workout,
 .previous-workout {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 4px;
+    .current-stats,
     .previous-stats {
         display: flex;
         flex-direction: row;
@@ -409,6 +418,16 @@ body {
         padding: 0px;
         margin: 0px;
         margin: 0px;
+    }
+}
+.completion-button-wrapper {
+    width: 100%;
+    button {
+        width: 100%;
+        display: flex;
+        gap: 4px;
+        justify-content: center;
+        border-radius: 24px;
     }
 }
 // ::::: The workout :::::

@@ -18,7 +18,7 @@
 }
 @font-face {
   font-family: "pp_neue_montrealthin";
-  src: url("../neue-montreal/ppneuemontreal-thin-webfont.woff2") format("woff2"), url("../neue-montreal/ppneuemontreal-thin-webfont.woff") format("woff");
+  src: url("../neue-montreal/PPNeueMontreal-Thin.woff2") format("woff2"), url("../neue-montreal/PPNeueMontreal-Thin.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -366,25 +366,31 @@ body {
   padding: 0 24px;
 }
 
-.current-workout {
+.workout-tittle-wrapper h1 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.current-workout-input-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4px;
   width: 100%;
 }
-.current-workout .wnr-forum {
+.current-workout-input-section .wnr-forum {
   display: flex;
   justify-content: center;
   gap: 16px;
   width: 100%;
 }
-.current-workout h1,
-.current-workout p {
+.current-workout-input-section h1,
+.current-workout-input-section p {
   padding: 0px;
   margin: 0px;
 }
 
+.current-workout,
 .previous-workout {
   display: flex;
   flex-direction: column;
@@ -392,6 +398,9 @@ body {
   align-items: center;
   gap: 4px;
 }
+.current-workout .current-stats,
+.current-workout .previous-stats,
+.previous-workout .current-stats,
 .previous-workout .previous-stats {
   display: flex;
   flex-direction: row;
@@ -399,6 +408,7 @@ body {
   align-items: center;
   gap: 24px;
 }
+.current-workout .section-crop-marks,
 .previous-workout .section-crop-marks {
   display: flex;
   flex-direction: row;
@@ -407,10 +417,23 @@ body {
   position: relative;
   bottom: 47px;
 }
+.current-workout p,
+.current-workout h1,
 .previous-workout p,
 .previous-workout h1 {
   padding: 0px;
   padding: 0px;
   margin: 0px;
   margin: 0px;
+}
+
+.completion-button-wrapper {
+  width: 100%;
+}
+.completion-button-wrapper button {
+  width: 100%;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  border-radius: 24px;
 }/*# sourceMappingURL=style.css.map */
