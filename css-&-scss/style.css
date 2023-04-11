@@ -436,4 +436,24 @@ body {
   gap: 4px;
   justify-content: center;
   border-radius: 24px;
+}
+
+.test-content-wrapper-dip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+.test-content-wrapper-dip h1 {
+  display: flex;
+  flex-grow: 1;
+  padding: 0px;
+  margin: 0px;
+  justify-content: center;
+  align-items: center;
+}
+.test-content-wrapper-dip .test-background-wrapper {
+  flex-grow: 12;
+  background: url("../assets/crop-marks/bottom-crop-mark.svg");
+  width: 20px;
 }/*# sourceMappingURL=style.css.map */
