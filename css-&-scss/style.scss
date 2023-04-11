@@ -130,6 +130,8 @@ input:focus::placeholder {
 }
 // ::::: Input styling :::::
 
+
+
 // ::::: Enterance page styling :::::
 body {
     margin: 0px;
@@ -137,11 +139,6 @@ body {
     box-sizing: border-box;
     background: transparent;
     // min-height: 100vh;
-}
-
-.content-wrapper-dip {
-    // margin: 24px 0;
-    // height: 100vh;
 }
 
 #entry-screen {
@@ -220,7 +217,10 @@ body {
 }
 // ::::: Enterance page styling :::::
 
-// ::::: Carousel styling :::::
+
+
+// ::::: Workotu option :::::
+// ::: Carousel styling :::
 .workout-selector .carousel {
     font-size: 0px;
     cursor: pointer;
@@ -237,9 +237,9 @@ body {
 .carousel img:first-child {
     margin-left: 0px;
 }
-// ::::: Carousel styling :::::
+// ::: Carousel styling :::
 
-// ::::: Crop marks :::::
+// ::: Crop marks :::
 .vertical-crop-mark-wrapper {
     display: flex;
     justify-content: center;
@@ -257,9 +257,9 @@ body {
     position: relative;
     top: 140px;
 }
-// ::::: Crop marks :::::
+// ::: Crop marks :::
 
-// ::::: Indicator dots :::::
+// ::: Indicator dots :::
 .indicator-dots {
     display: flex;
     flex-direction: row;
@@ -289,9 +289,9 @@ body {
         display: none;
     }
 }
-// ::::: Indicator dots :::::
+// ::: Indicator dots :::
 
-// ::::: Workout description :::::
+// ::: Workout description :::
 .inactive-workout-desc {
     display: none;
 }
@@ -317,7 +317,10 @@ body {
         border-radius: 50px;
     }
 }
-// ::::: Workout description :::::
+// ::: Workout description :::
+// ::::: Workotu option :::::
+
+
 
 // ::::: Date and time page :::::
 .date-and-time-option {
@@ -373,6 +376,8 @@ body {
     }
 }
 // ::::: Date and time page :::::
+
+
 
 // ::::: The workout :::::
 .workout-option {
@@ -470,27 +475,29 @@ body {
 // ::::: The workout :::::
 
 
-
-
-
-// ::::: Testing :::::
-.test-content-wrapper-dip {
+// ::::: Finish screen :::::
+#finish-screen {
     display: flex;
     flex-direction: column;
+    gap: 48px;
+    justify-content: center;
     align-items: center;
     height: 100vh;
-    h1 {
-        display: flex;
-        flex-grow: 1;
+    h1, h2 {
         padding: 0px;
         margin: 0px;
-        justify-content: center;
-        align-items: center;
+        text-align: center;
     }
-    .test-background-wrapper {
-        flex-grow: 12;
-        background: url("../assets/crop-marks/bottom-crop-mark.svg");
-        width: 20px;
+    .tittle-wrapper {
+        width: 100%;
+    }
+    .section-crop-marks {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 380px;
+        position: relative;
+        bottom: 24px;
     }
 }
-// ::::: Testing :::::
+// ::::: Finish screen :::::

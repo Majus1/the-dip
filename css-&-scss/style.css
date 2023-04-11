@@ -465,22 +465,27 @@ body {
   margin: 0px;
 }
 
-.test-content-wrapper-dip {
+#finish-screen {
   display: flex;
   flex-direction: column;
+  gap: 48px;
+  justify-content: center;
   align-items: center;
   height: 100vh;
 }
-.test-content-wrapper-dip h1 {
-  display: flex;
-  flex-grow: 1;
+#finish-screen h1, #finish-screen h2 {
   padding: 0px;
   margin: 0px;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
-.test-content-wrapper-dip .test-background-wrapper {
-  flex-grow: 12;
-  background: url("../assets/crop-marks/bottom-crop-mark.svg");
-  width: 20px;
+#finish-screen .tittle-wrapper {
+  width: 100%;
+}
+#finish-screen .section-crop-marks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 380px;
+  position: relative;
+  bottom: 24px;
 }/*# sourceMappingURL=style.css.map */
