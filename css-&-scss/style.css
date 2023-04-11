@@ -86,11 +86,14 @@ button:hover {
   border-radius: 100%;
 }
 
-.go-button {
+.begin-button {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 346px;
+  left: 9px;
 }
 
 input {
@@ -140,11 +143,14 @@ body {
   padding: 0px;
   box-sizing: border-box;
   background: transparent;
-  min-height: 100vh;
 }
 
 .content-wrapper-dip {
   margin: 24px 0;
+}
+
+#entry-screen {
+  margin: 48px 0px;
 }
 
 .introductions {
@@ -170,36 +176,30 @@ body {
   margin: 0 48px;
 }
 
-.go-button {
-  position: absolute;
-  top: 431px;
-  left: 8px;
-}
-
 .vertical-text {
   color: #000000;
   position: absolute;
   rotate: 90deg;
-  top: 174px;
-  left: -145px;
+  top: 150px;
+  left: -130px;
 }
 
-.text-block-1 {
+.motivation-section {
   position: absolute;
   left: 188px;
-  top: 291px;
+  top: 205px;
 }
-.text-block-1 p {
+.motivation-section p {
   padding: 0px;
   margin: 0px;
 }
-.text-block-1 .body-1-bold {
+.motivation-section .body-1-bold {
   text-align: right;
 }
 
 .fpl-02 {
   position: absolute;
-  left: 315px;
+  left: 344px;
 }
 
 .circle-group-1 {
