@@ -30,14 +30,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
-@font-face {
-    font-family: 'pp_neue_montrealthin';
-    src: url('../neue-montreal/PPNeueMontreal-Thin.woff2') format('woff2'),
-         url('../neue-montreal/PPNeueMontreal-Thin.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
 // ::::: Fonts used :::::
 
 
@@ -135,6 +127,11 @@ input::placeholder {
 }
 input:focus::placeholder {
     color: rgba($color: #ffffff, $alpha: .50);
+}
+input[type=date],
+input[type=time] {
+    padding-left: 24px;
+    padding-right: 24px;
 }
 // ::::: Input styling :::::
 
