@@ -22,9 +22,15 @@
   font-weight: normal;
   font-style: normal;
 }
+:root {
+  --type-color-01: #000;
+  --type-color-02: #fff;
+}
+
 .display-3 {
   font-size: 64px;
   font-family: "pp_neue_montrealthin";
+  color: var(--type-color-01);
 }
 
 .display-5 {
@@ -69,7 +75,7 @@ button {
   border: none;
   padding: 1em;
   background-color: rgba(0, 0, 0, 0.75);
-  color: white;
+  color: var(--type-color-02);
   font-size: 18px;
   font-family: "pp_neue_montrealmedium";
 }
@@ -104,17 +110,17 @@ input {
   text-align: center;
   border-radius: 16px;
   border: solid 2px #000000;
-  color: #000000;
+  color: var(--type-color-01);
   transition: background 0.5s;
 }
 
 input:focus {
-  background: rgba(0, 0, 0, 0.75);
-  color: #fff;
+  background: rgba(var(--type-color-01), 0.75);
+  color: var(--type-color-02);
 }
 
 input::-moz-placeholder {
-  color: black;
+  color: var(--type-color-01);
   font-size: 16px;
   font-family: "pp_neue_montrealbook";
   line-height: 1.5;
@@ -123,7 +129,7 @@ input::-moz-placeholder {
 }
 
 input::placeholder {
-  color: black;
+  color: var(--type-color-01);
   font-size: 16px;
   font-family: "pp_neue_montrealbook";
   line-height: 1.5;
@@ -131,11 +137,11 @@ input::placeholder {
 }
 
 input:focus::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(var(--type-color-02), 0.5);
 }
 
 input:focus::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(var(--type-color-02), 0.5);
 }
 
 input[type=date],
@@ -187,7 +193,7 @@ body {
 }
 
 .vertical-text {
-  color: #000000;
+  color: var(--type-color-01);
   position: absolute;
   rotate: 90deg;
   top: 150px;
