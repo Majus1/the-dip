@@ -249,11 +249,14 @@ body {
 .vertical-crop-mark-wrapper {
   display: flex;
   justify-content: center;
+  height: 56px;
 }
 .vertical-crop-mark-wrapper .top-crop-mark {
+  position: relative;
   padding-bottom: 32px;
 }
 .vertical-crop-mark-wrapper .bottom-crop-mark {
+  position: relative;
   padding-top: 32px;
 }
 
@@ -579,5 +582,54 @@ body {
   }
   100% {
     top: 0px;
+  }
+}
+.horizontal-crop-mark-wrapper {
+  padding: 0 24px;
+  animation: horizontal-crop-mark-movement 2.5s linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes horizontal-crop-mark-movement {
+  0% {
+    padding: 0 24px;
+  }
+  50% {
+    padding: 0 48px;
+  }
+  100% {
+    padding: 0 24px;
+  }
+}
+.top-crop-mark {
+  animation: vertical-top-crop-mark-wrapper 2.5s linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes vertical-top-crop-mark-wrapper {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: 16px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+.bottom-crop-mark {
+  animation: vertical-bottom-crop-mark-wrapper 2.5s linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes vertical-bottom-crop-mark-wrapper {
+  0% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 16px;
+  }
+  100% {
+    bottom: 0px;
   }
 }/*# sourceMappingURL=style.css.map */
