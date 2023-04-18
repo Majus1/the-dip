@@ -1,3 +1,12 @@
+:root {
+  --black: 0, 0, 0;
+  --white: 255, 255, 255;
+  --background-color: 189, 255, 0;
+  --type-color-black: rgba(var(--black));
+  --type-color-white: rgba(var(--white));
+  --color-black-opacity: rgba(var(--black), 0.75);
+}
+
 @font-face {
   font-family: "pp_neue_montrealbold";
   src: url("../neue-montreal/ppneuemontreal-bold-webfont.woff2") format("woff2"), url("../neue-montreal/ppneuemontreal-bold-webfont.woff") format("woff");
@@ -22,15 +31,10 @@
   font-weight: normal;
   font-style: normal;
 }
-:root {
-  --type-color-01: #000;
-  --type-color-02: #fff;
-}
-
 .display-3 {
   font-size: 64px;
   font-family: "pp_neue_montrealthin";
-  color: var(--type-color-01);
+  color: var(--type-color-black);
 }
 
 .display-5 {
@@ -59,30 +63,18 @@
   font-family: "pp_neue_montrealmedium";
 }
 
-#gradient-canvas {
-  width: 100%;
-  height: 125%;
-  --gradient-color-1: #FC4937;
-  --gradient-color-2: #FE7A1A;
-  --gradient-color-3: #FFE91F;
-  --gradient-color-4: #FFE7D9;
-  position: fixed;
-  top: -48px;
-  z-index: -1000;
-}
-
 button {
   border: none;
   padding: 1em;
-  background-color: rgba(0, 0, 0, 0.75);
-  color: var(--type-color-02);
+  background-color: rgba(var(--black), 0.75);
+  color: var(--type-color-white);
   font-size: 18px;
   font-family: "pp_neue_montrealmedium";
 }
 
 button:hover {
   transition: 2000;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(var(--black), 0.5);
   transition: 0.5s;
 }
 
@@ -109,18 +101,18 @@ input {
   padding: 16px 0;
   text-align: center;
   border-radius: 16px;
-  border: solid 2px #000000;
-  color: var(--type-color-01);
+  border: solid 2px var(--type-color-black);
+  color: var(--type-color-black);
   transition: background 0.5s;
 }
 
 input:focus {
-  background: rgba(var(--type-color-01), 0.75);
-  color: var(--type-color-02);
+  background: rgba(var(--black), 0.75);
+  color: var(--type-color-white);
 }
 
 input::-moz-placeholder {
-  color: var(--type-color-01);
+  color: var(--type-color-black);
   font-size: 16px;
   font-family: "pp_neue_montrealbook";
   line-height: 1.5;
@@ -129,7 +121,7 @@ input::-moz-placeholder {
 }
 
 input::placeholder {
-  color: var(--type-color-01);
+  color: var(--type-color-black);
   font-size: 16px;
   font-family: "pp_neue_montrealbook";
   line-height: 1.5;
@@ -137,11 +129,11 @@ input::placeholder {
 }
 
 input:focus::-moz-placeholder {
-  color: rgba(var(--type-color-02), 0.5);
+  color: rgba(var(--white), 0.5);
 }
 
 input:focus::placeholder {
-  color: rgba(var(--type-color-02), 0.5);
+  color: rgba(var(--white), 0.5);
 }
 
 input[type=date],
@@ -154,7 +146,7 @@ body {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  background: transparent;
+  background: rgb(var(--background-color));
 }
 
 #entry-screen {
@@ -193,7 +185,7 @@ body {
 }
 
 .vertical-text {
-  color: var(--type-color-01);
+  color: var(--type-color-black);
   position: absolute;
   rotate: 90deg;
   top: 150px;

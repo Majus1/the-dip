@@ -1,3 +1,17 @@
+// ::::: Variables used :::::
+:root {
+    --black: 0, 0, 0;
+    --white: 255, 255, 255;
+    --background-color: 189, 255, 0;
+    --type-color-black: rgba(var(--black));
+    --type-color-white: rgba(var(--white));
+    --color-black-opacity: rgba(var(--black), 0.75);
+}
+// ::::: Variables used :::::
+
+
+
+
 // ::::: Fonts used :::::
 @font-face {
     font-family: 'pp_neue_montrealbold';
@@ -33,74 +47,84 @@
 // ::::: Fonts used :::::
 
 
+
+
 // ::::: Typography styling :::::
-// ::: Typography color :::
-:root {
-    --type-color-01: #000;
-    --type-color-02: #fff;
-}
-// ::: Typography color :::
 .display-3 {
     font-size: 64px;
     font-family: 'pp_neue_montrealthin';
-    color: var(--type-color-01);
+    color: var(--type-color-black);
 }
+
 .display-5 {
     font-size: 42px;
     font-family: 'pp_neue_montrealbook';
 }
+
 .display-6 {
     font-size: 36px;
     font-family: 'pp_neue_montrealbook';
 }
+
 .lead-3 {
     font-size: 18px;
     font-family: 'pp_neue_montrealmedium';
 }
+
 .body-1 {
     font-size: 16px;
     font-family: 'pp_neue_montrealbook';
     line-height: 1.5;
 }
+
 .body-1-bold {
     font-size: 16px;
     font-family: 'pp_neue_montrealmedium';
 }
 // ::::: Typography styling :::::
 
+
+
+
 // ::::: Gradient :::::
-#gradient-canvas {
-    width:100%;
-    height:125%;
-    --gradient-color-1: #FC4937; 
-    --gradient-color-2: #FE7A1A; 
-    --gradient-color-3: #FFE91F;  
-    --gradient-color-4: #FFE7D9;
-    position: fixed;
-    top: -48px;
-    z-index: -1000;
-  }
+// #gradient-canvas {
+//     width:100%;
+//     height:125%;
+//     --gradient-color-1: #FC4937; 
+//     --gradient-color-2: #FE7A1A; 
+//     --gradient-color-3: #FFE91F;  
+//     --gradient-color-4: #FFE7D9;
+//     position: fixed;
+//     top: -48px;
+//     z-index: -1000;
+// }
 // ::::: Gradient :::::  
+
+
+
 
 // ::::: Input styling :::::
 button {
     border: none;
     padding: 1em;
-    background-color: rgba($color: #000000, $alpha: .75);
-    color: var(--type-color-02);
+    background-color: rgba($color: var(--black), $alpha: .75);
+    color: var(--type-color-white);
     font-size: 18px;
     font-family: 'pp_neue_montrealmedium';
 }
+
 button:hover {
     transition: 2000;
-    background-color: rgba($color: #000000, $alpha: .50);
+    background-color: rgba($color: var(--black), $alpha: .50);
     transition: 0.5s;
 }
+
 .gate button {
     width: 178px;
     height: 178px;
     border-radius: 100%;
 }
+
 .begin-button {
     display: flex;
     flex-direction: column;
@@ -110,6 +134,7 @@ button:hover {
     top: 346px;
     left: 9px;
 }
+
 input {
     background: none;
     box-sizing: border-box;
@@ -117,24 +142,28 @@ input {
     padding: 16px 0;
     text-align: center;
     border-radius: 16px;
-    border: solid 2px #000000;
-    color: var(--type-color-01);     
+    border: solid 2px var(--type-color-black);
+    color: var(--type-color-black);     
     transition: background .5s;
 }
+
 input:focus {
-    background: rgba($color: var(--type-color-01), $alpha: .75);
-    color: var(--type-color-02);
+    background: rgba($color: var(--black), $alpha: .75);
+    color: var(--type-color-white);
 }
+
 input::placeholder {
-    color: var(--type-color-01);
+    color: var(--type-color-black);
     font-size: 16px;
     font-family: 'pp_neue_montrealbook';
     line-height: 1.5;
     transition: color .5s;
 }
+
 input:focus::placeholder {
-    color: rgba($color: var(--type-color-02), $alpha: .50);
+    color: rgba($color: var(--white), $alpha: .50);
 }
+
 input[type=date],
 input[type=time] {
     padding-left: 24px;
@@ -144,12 +173,13 @@ input[type=time] {
 
 
 
+
 // ::::: Enterance page styling :::::
 body {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    background: transparent;
+    background: rgb(var(--background-color));
     // min-height: 100vh;
 }
 
@@ -182,18 +212,20 @@ body {
         margin: 0px;
     }
 }
+
 .gate {
     position: relative;
     margin: 0 48px;
 }
 
 .vertical-text {
-    color: var(--type-color-01);
+    color: var(--type-color-black);
     position: absolute;
     rotate: 90deg;
     top: 150px;
     left: -130px;
 }
+
 .motivation-section {
     position: absolute;
     left: 188px;
@@ -206,10 +238,12 @@ body {
         text-align: right;
     }
 }
+
 .fpl-02 {
     position: absolute;
     left: 325px;
 }
+
 .circle-group-1 {
     position: absolute;
     top: -144px;
@@ -218,6 +252,7 @@ body {
     align-items: center;
     gap: 16px;
 }
+
 .circle-group-2 {
     position: absolute;
     top: 84px;
@@ -228,6 +263,7 @@ body {
     gap: 16px;
 }
 // ::::: Enterance page styling :::::
+
 
 
 
@@ -251,6 +287,7 @@ body {
 }
 // ::: Carousel styling :::
 
+
 // ::: Crop marks :::
 .vertical-crop-mark-wrapper {
     display: flex;
@@ -270,6 +307,7 @@ body {
     top: 140px;
 }
 // ::: Crop marks :::
+
 
 // ::: Indicator dots :::
 .indicator-dots {
@@ -303,6 +341,7 @@ body {
 }
 // ::: Indicator dots :::
 
+
 // ::: Workout description :::
 .inactive-workout-desc {
     display: none;
@@ -331,6 +370,7 @@ body {
 }
 // ::: Workout description :::
 // ::::: Workotu option :::::
+
 
 
 
@@ -391,6 +431,7 @@ body {
 
 
 
+
 // ::::: The workout :::::
 .workout-option {
     display: flex;
@@ -411,6 +452,7 @@ body {
         }
     }
 }
+
 .workout-header {
     display: flex;
     flex-direction: column;
@@ -485,6 +527,7 @@ body {
     }
 }
 // ::::: The workout :::::
+
 
 
 // ::::: Finish screen :::::
