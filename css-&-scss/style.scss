@@ -239,7 +239,7 @@ body {
     }
 }
 
-.fpl-02 {
+.always-up-arrow {
     position: absolute;
     left: 325px;
 }
@@ -619,14 +619,14 @@ body {
 // ::: broken stroke :::
 .curved-line {
     stroke-dasharray: 908;
-    stroke-dashoffset: 20;
+    stroke-dashoffset: 50;
     animation: curved-line-broken-stroke 5s linear;
     animation-iteration-count: infinite;
 }
 @keyframes curved-line-broken-stroke {
     0% {
         stroke-dasharray: 908;
-        stroke-dashoffset: 20;
+        stroke-dashoffset: 50;
     }
     50% {
         stroke-dasharray: 908;
@@ -634,8 +634,27 @@ body {
     }
     100% {
         stroke-dasharray: 908;
-        stroke-dashoffset: 20;
+        stroke-dashoffset: 50;
     }
 }
 // // ::: broken stroke :::
+
+// // ::: Always Up arrow :::
+.always-up-arrow {
+    top: 0;
+    animation: arrow-movement 2.5s linear;
+    animation-iteration-count: infinite;
+}
+@keyframes arrow-movement {
+    0% {
+        top: 0px;
+    }
+    50% {
+        top: 8px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+// // ::: Always Up arrow :::
 // ::::: Animations :::::
