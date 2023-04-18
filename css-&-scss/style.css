@@ -542,4 +542,25 @@ body {
   100% {
     width: 16px;
   }
+}
+.curved-line {
+  stroke-dasharray: 908;
+  stroke-dashoffset: 20;
+  animation: curved-line-broken-stroke 5s linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes curved-line-broken-stroke {
+  0% {
+    stroke-dasharray: 908;
+    stroke-dashoffset: 20;
+  }
+  50% {
+    stroke-dasharray: 908;
+    stroke-dashoffset: 28;
+  }
+  100% {
+    stroke-dasharray: 908;
+    stroke-dashoffset: 20;
+  }
 }/*# sourceMappingURL=style.css.map */
