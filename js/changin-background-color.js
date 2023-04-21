@@ -47,8 +47,9 @@ function generateRandomColor() {
     const bgColor = generateRandomColor();
   
     const button = document.querySelector("button");
-    let path = document.querySelector("button svg path");
-  
+    let buttonIconPath = document.querySelector("button svg path");
+    let alwaysUpArrow = document.querySelector(".color-line");
+
     const textColor = getTextColor(bgColor);
 
     // for()
@@ -58,7 +59,8 @@ function generateRandomColor() {
     document.body.style.backgroundColor = bgColor;
     button.style.backgroundColor = textColor;
     button.style.color = bgColor;
-    path.style.fill = bgColor;
+    buttonIconPath.style.fill = bgColor;
+    alwaysUpArrow.style.fill = textColor;
     document.body.style.color = textColor;
   }
   
