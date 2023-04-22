@@ -38,13 +38,6 @@
                 <h1 class="display-6">BENCH PRESS</h1>
                 <!-- Previous workout -->
                 <div class="previous-stats body-1">
-                    <p class="previos-weight">140kg</p>
-                    <p class="previos-rep rep-01">8</p>
-                    <p class="previos-rep rep-02">8</p>
-                    <p class="previos-rep rep-03">8</p>
-                    <p class="previos-rep rep-04">8</p>
-                    <p class="previos-rep rep-05">8</p>
-                    <p class="previos-rep rep-06">8</p>
                 </div>
                 <!-- Previous workout -->
                 <!-- Section crop marks -->
@@ -67,23 +60,16 @@
                     <input type="number" id="exercise-weight" name="exercise-weight" placeholder="Enter weight" required>
                     <input type="number" id="exercise-reps" name="exercise-reps" placeholder="Enter reps" required>
                 </div>
-                <p class="body-1">Current set det</p>
+                <p class="body-1">Current set details</p>
             </div>
             <!-- ::: Weight & Reps section ::: -->
         
             <!-- ::: Current workout ::: -->
             <div class="current-workout">
-                <p class="body-1">Previously on...</p>
+                <p class="body-1">Current workout progress...</p>
                 <h1 class="display-6">BENCH PRESS</h1>
                 <!-- Current workout -->
                 <div class="current-stats body-1">
-                    <p class="previos-weight">140kg</p>
-                    <p class="previos-rep rep-01">8</p>
-                    <p class="previos-rep rep-02">8</p>
-                    <p class="previos-rep rep-03">8</p>
-                    <p class="previos-rep rep-04">8</p>
-                    <p class="previos-rep rep-05">8</p>
-                    <p class="previos-rep rep-06">8</p>
                 </div>
                 <!-- Current workout -->
                 <!-- Section crop marks -->
@@ -104,7 +90,12 @@
         
         
 
-        
+        <div class="completion-button-wrapper">
+            <button id="save-reps-button">
+                <img src="assets/icons/done_outline.svg" alt="did-icon">
+                SAVE REPS
+            </button>
+        </div>
 
         <!-- ::::: Completion button ::::: -->
         <div class="completion-button-wrapper">
@@ -117,7 +108,7 @@
                     <path d="M9.52505 17.9998L20.125 7.3998L18.7001 5.9998L9.50005 15.1748L5.27505 10.9248L3.85005 12.3498L9.52505 17.9998ZM9.52505 20.8248L1.05005 12.3498L5.27505 8.0998L9.52505 12.3498L18.6751 3.1748L22.975 7.3748L9.52505 20.8248Z" fill="white"/>
                     </g>
                 </svg>
-                MARK
+                FINISH WORKOUT
             </button>
         </div>
         <!-- ::::: Completion button ::::: -->
@@ -126,6 +117,9 @@
 
     <!-- <canvas id="gradient-canvas" data-transition-in /></canvas> -->
     <!-- ::::: Scripts ::::: -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
     <!-- <script src="js/Gradient.js"></script> -->
     <script src="js/changin-background-color.js"></script>
     <!-- ::::: Scripts ::::: -->
