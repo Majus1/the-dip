@@ -48,19 +48,34 @@ function generateRandomColor() {
   
     const button = document.querySelector("button");
     let buttonIconPath = document.querySelector("button svg path");
-    let alwaysUpArrow = document.querySelector(".color-line");
-
+    let linesOnPage = document.querySelectorAll(".color-line");
+    let cropMarks = document.querySelectorAll(".crop-line");
+    
     const textColor = getTextColor(bgColor);
-
-    // for()
-    // (i=0; i< indicatorDots.length; i++)
+    
   
-  
+    // Changes background color
     document.body.style.backgroundColor = bgColor;
+
+    // Changes button background color
     button.style.backgroundColor = textColor;
+
+    // Changes button text color
     button.style.color = bgColor;
+
+    // Changes icon color
     buttonIconPath.style.fill = bgColor;
-    alwaysUpArrow.style.fill = textColor;
+
+    // Changes color of svg lines with class ".color-line" lines on page
+    for(i=0; i<linesOnPage.length; i++) {
+      linesOnPage[i].style.fill = textColor;
+    };
+
+    // Changes color of stroke of crop marks with the class ".crop-line".
+    for(z=0; z<cropMarks.length; z++) {
+      cropMarks[z].style.stroke = textColor;
+    };
+
     document.body.style.color = textColor;
   }
   
