@@ -28,7 +28,6 @@
 .display-3 {
   font-size: 64px;
   font-family: "pp_neue_montrealbook";
-  color: var(--type-color-black);
 }
 
 .display-5 {
@@ -179,7 +178,6 @@ body {
 }
 
 .vertical-text {
-  color: var(--type-color-black);
   position: absolute;
   rotate: 90deg;
   top: 150px;

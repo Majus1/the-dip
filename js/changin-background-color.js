@@ -50,6 +50,8 @@ function generateRandomColor() {
     let buttonIconPath = document.querySelector("button svg path");
     let linesOnPage = document.querySelectorAll(".color-line");
     let cropMarks = document.querySelectorAll(".crop-line");
+    let filledInIcons = document.querySelectorAll(".filled-icon");
+    let inputsOnScreen = document.querySelectorAll("input");
     
     const textColor = getTextColor(bgColor);
     
@@ -71,10 +73,28 @@ function generateRandomColor() {
       linesOnPage[i].style.fill = textColor;
     };
 
-    // Changes color of stroke of crop marks with the class ".crop-line".
+    // Changes color of stroke of svgs paths with the class="crop-line";.
     for(z=0; z<cropMarks.length; z++) {
       cropMarks[z].style.stroke = textColor;
     };
+
+    // Changes fill color of svgs paths with class="filled-icon";.
+    for(y=0; y<filledInIcons.length; y++) {
+      filledInIcons[y].style.fill = textColor;
+    };
+
+    // Changes border color of all inputs .... Maybe there is a better way
+    // for(x=0; x<inputsOnScreen.length; x++) {
+    //   inputsOnScreen[x].style.border = `2px solid ${textColor}`;
+    //   inputsOnScreen[x].style.color = `${textColor}`;
+    // };
+
+    // Changes border color an inside content of all inputs
+    for(q=0; q<inputsOnScreen.length; q++) {
+      console.log(inputsOnScreen[q]);
+      // add if statement witch will iterate over all inputs and style them acordingly.
+      inputsOnScreen[q].style.filter = "invert(100%) sepia(25%) saturate(0%) hue-rotate(180deg) brightness(100%) contrast(100%)";
+    }
 
     document.body.style.color = textColor;
   }
