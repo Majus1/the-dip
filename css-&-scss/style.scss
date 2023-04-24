@@ -544,6 +544,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 0 24px;
     h1, h2 {
         padding: 0px;
         margin: 0px;
@@ -559,6 +560,16 @@ body {
         width: 380px;
         position: relative;
         bottom: 24px;
+    }
+    .restart-button-wrapper {
+        width: 100%;
+        button {
+            width: 100%;
+            display: flex;
+            gap: 4px;
+            justify-content: center;
+            border-radius: 24px;
+        }
     }
 }
 // ::::: Finish screen :::::
