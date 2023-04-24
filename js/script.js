@@ -32,10 +32,8 @@ $("#finish-button").click(function () {
 $(window).on("load", function () {
     if (window.location.pathname === "/the-dip/the-workout.html") {
         let previousWorkoutStr = localStorage.getItem($(".display-3").text());
-        console.log(previousWorkoutStr);
         if (previousWorkoutStr !== null) {
             let previousWorkout = JSON.parse(previousWorkoutStr);
-            console.log(previousWorkout);
             $(".previous-stats").append('<p class="previous-weight"><span>' + previousWorkout.weight + '</span>kg</p>');
             previousWorkout.repetitions.forEach(function (number) {
                 $(".previous-stats").append('<p class="previous-rep rep-01">' + number + '</p>');
