@@ -33,10 +33,20 @@
         <!-- ::::: Workout selector slider ::::: -->
         <div class="workout-selector">
             <div class="carousel">
-                <img id="workout-option_push" src="assets/big-workout-icons/big-push-arrow.svg" alt="workout-option" draggable="false">
-                <img id="workout-option_pull" src="assets/big-workout-icons/big-pull-arrow.svg" alt="workout-option" draggable="false">
-                <img id="workout-option_legs-pt1" src="assets/big-workout-icons/big-legs-pt1.svg" alt="workout-option" draggable="false">
-                <img id="workout-option_legs-pt2" src="assets/big-workout-icons/big-legs-pt2.svg" alt="workout-option" draggable="false">
+                <svg id="workout-option_push" width="278" height="278" viewBox="0 0 278 278" fill="none" xmlns="http://www.w3.org/2000/svg" alt="workout-option" draggable="false">
+                    <path class="crop-line" d="M1.5 139.445L126.143 14.341L126.27 14.2138L138.937 1.5L276.5 139.445L259.02 156.99L150.844 48.5411V276.5H126.143V49.4311L18.9804 156.99L1.5 139.445Z" stroke="black" stroke-width="2" stroke-miterlimit="10"/>
+                </svg>
+                <svg id="workout-option_pull" width="278" height="278" viewBox="0 0 278 278" fill="none" xmlns="http://www.w3.org/2000/svg" draggable="false">
+                    <path class="crop-line" d="M276.5 138.555L151.857 263.659L151.73 263.786L138.937 276.5L1.5 138.555L18.9804 121.01L127.156 229.586V1.5H151.857V228.569L259.02 121.01L276.5 138.555Z" stroke="black" stroke-width="2" stroke-miterlimit="10"/>
+                </svg>
+                <svg id="workout-option_legs-pt1" width="278" height="278" viewBox="0 0 278 278" fill="none" xmlns="http://www.w3.org/2000/svg" draggable="false">
+                    <path class="crop-line" d="M124.955 1.5V276.5H86.3315L1.5 191.899L20.882 172.537L97.5675 249.141V1.5H124.955Z" stroke="black" stroke-width="2" stroke-miterlimit="10"/>
+                    <path class="crop-line" d="M276.5 1.5V276.5H237.876L153.045 191.899L172.427 172.537L249.112 249.141V1.5H276.5Z" stroke="black" stroke-width="2" stroke-miterlimit="10"/>
+                </svg>
+                <svg id="workout-option_legs-pt2" width="278" height="278" viewBox="0 0 278 278" fill="none" xmlns="http://www.w3.org/2000/svg" draggable="false">
+                    <path class="crop-line" d="M153.045 1.5V276.5H191.669L276.5 191.899L257.118 172.537L180.433 249.141V1.5H153.045Z" stroke="black" stroke-width="2" stroke-miterlimit="10"/>
+                    <path class="crop-line" d="M1.5 1.5V276.5H40.1236L124.955 191.899L105.573 172.537L28.8877 249.141V1.5H1.5Z" stroke="black" stroke-width="2" stroke-miterlimit="10"/>
+                </svg>
             </div>
         </div>
         <!-- ::::: Workout selector slider ::::: -->
@@ -54,37 +64,37 @@
             <!-- First dot -->
             <div id="first-dot" class="dot activated-content">
                 <svg class="inactive-dot" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="8" cy="8" r="7" stroke="black" stroke-width="2"/>
+                    <circle class="crop-line" cx="8" cy="8" r="7" stroke="black" stroke-width="2"/>
                 </svg>
                 <svg class="active-dot" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="8" cy="8" r="8" fill="black"/>
+                    <circle class="filled-icon" cx="8" cy="8" r="8" fill="black"/>
                 </svg>
             </div>
             <!-- Second dot -->
             <div id="second-dot" class="dot inactivated-content">
                 <svg class="inactive-dot" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="8" cy="8" r="7" stroke="black" stroke-width="2"/>
+                    <circle class="crop-line" cx="8" cy="8" r="7" stroke="black" stroke-width="2"/>
                 </svg>
                 <svg class="active-dot" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="8" cy="8" r="8" fill="black"/>
+                    <circle class="filled-icon" cx="8" cy="8" r="8" fill="black"/>
                 </svg>
             </div>
             <!-- Third dot -->
             <div id="third-dot" class="dot inactivated-content">
                 <svg class="inactive-dot" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="8" cy="8" r="7" stroke="black" stroke-width="2"/>
+                    <circle class="crop-line" cx="8" cy="8" r="7" stroke="black" stroke-width="2"/>
                 </svg>
                 <svg class="active-dot" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="8" cy="8" r="8" fill="black"/>
+                    <circle class="filled-icon" cx="8" cy="8" r="8" fill="black"/>
                 </svg>
             </div>
             <!-- Fourth dot -->
             <div id="fourth-dot" class="dot inactivated-content">
                 <svg class="inactive-dot" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="8" cy="8" r="7" stroke="black" stroke-width="2"/>
+                    <circle class="crop-line" cx="8" cy="8" r="7" stroke="black" stroke-width="2"/>
                 </svg>
                 <svg class="active-dot" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="8" cy="8" r="8" fill="black"/>
+                    <circle class="filled-icon" cx="8" cy="8" r="8" fill="black"/>
                 </svg>
             </div>
         </div>

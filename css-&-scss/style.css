@@ -227,12 +227,12 @@ body {
   white-space: nowrap;
 }
 
-.carousel img {
+.carousel svg {
   height: 275px;
   width: 100%;
 }
 
-.carousel img:first-child {
+.carousel svg:first-child {
   margin-left: 0px;
 }
 
