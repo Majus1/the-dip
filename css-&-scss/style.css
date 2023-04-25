@@ -148,10 +148,6 @@ body {
   margin-top: 24px;
 }
 
-#date-and-time-screen {
-  height: 100vh;
-}
-
 .introductions {
   display: flex;
   flex-direction: column;
