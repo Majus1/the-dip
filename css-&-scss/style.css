@@ -60,7 +60,6 @@ button {
   border: none;
   padding: 1em;
   background-color: rgba(var(--black), 0.75);
-  color: var(--type-color-white);
   font-size: 18px;
   font-family: "pp_neue_montrealmedium";
 }
@@ -95,7 +94,6 @@ input {
   text-align: center;
   border-radius: 16px;
   border: solid 2px var(--type-color-black);
-  color: var(--type-color-black);
   transition: background 0.5s;
 }
 
@@ -376,15 +374,16 @@ body {
   height: 100vh;
   padding: 0 24px;
 }
-.workout-option .completion-button-wrapper {
+.workout-option .button-wrapper {
   width: 100%;
   padding-bottom: 24px;
 }
-.workout-option .completion-button-wrapper button {
+.workout-option .button-wrapper button {
   width: 100%;
   display: flex;
   gap: 4px;
   justify-content: center;
+  align-items: center;
   border-radius: 24px;
 }
 

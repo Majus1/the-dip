@@ -71,8 +71,8 @@ function generateRandomColor() {
   function roll() {
     const bgColor = generateRandomColor();
   
-    const button = document.querySelector("button");
-    let buttonIconPath = document.querySelector("button svg path");
+    const buttonOnScreen = document.querySelectorAll("button");
+    let buttonIconPath = document.querySelectorAll("button svg path");
     let linesOnPage = document.querySelectorAll(".color-line");
     let cropMarks = document.querySelectorAll(".crop-line");
     let filledInIcons = document.querySelectorAll(".filled-icon");
@@ -85,14 +85,20 @@ function generateRandomColor() {
     // Changes background color
     document.body.style.backgroundColor = bgColor;
 
-    // Changes button background color
-    button.style.backgroundColor = textColor;
+    // Changes all button icon colors
+    for (a=0; a<buttonIconPath.length; a++) {
+      buttonIconPath[a].style.fill = bgColor;
+    };
 
-    // Changes button text color
-    button.style.color = bgColor;
+    // Changes background color of all buttons
+    for (b=0; b<buttonOnScreen.length; b++) {
+      buttonOnScreen[b].style.backgroundColor = textColor;
+    };
 
-    // Changes icon color
-    buttonIconPath.style.fill = bgColor;
+    // Changes text color of all buttons
+    for (c=0; c<buttonOnScreen.length; c++) {
+      buttonOnScreen[c].style.color = bgColor;
+    };
 
     // Changes color of svg lines with class ".color-line" lines on page
     for(i=0; i<linesOnPage.length; i++) {
@@ -118,6 +124,8 @@ function generateRandomColor() {
       if (inputsOnScreenBorderColor !== convertToRGB(textColor)) {
         // console.log(`the colors didnt match not match but were fixed`);
         inputsOnScreen[q].style.filter = "invert(100%) sepia(25%) saturate(0%) hue-rotate(180deg) brightness(100%) contrast(100%)";
+      } else {
+        inputsOnScreen[q].style.removeProperty("filter");
       }
     }
 
