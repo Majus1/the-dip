@@ -1,8 +1,10 @@
 // Basic console log stattement
 console.log("Background changer is linked");
+// Basic console log stattement
 
 
-// Function for changing colors
+
+// ::::: Function for getting a random color :::::
 function generateRandomColor() {
     var letters = "0123456789ABCDEF";
     var color = "";
@@ -42,7 +44,30 @@ function generateRandomColor() {
   
     return whiteContrast > blackContrast ? "#ffffff" : "#000000";
   }
+  // ::::: Function for getting a random color :::::
+
+
+
+  // ::::: Function that converts hex to RGB :::::
+  function convertToRGB(color) {
+    // Remove the hash symbol from the beginning of the color code
+    const hexString = color.substring(1);
   
+    // Split the string into three equal parts of two characters each
+    const r = parseInt(hexString.substring(0, 2), 16);
+    const g = parseInt(hexString.substring(2, 4), 16);
+    const b = parseInt(hexString.substring(4, 6), 16);
+  
+    // Combine the decimal values into an RGB color string
+    const rgbString = "rgb(" + r + ", " + g + ", " + b + ")";
+  
+    return rgbString;
+  }
+  // ::::: Function that converts hex to RGB :::::
+  
+
+
+  // ::::: Function that triggers color change :::::
   function roll() {
     const bgColor = generateRandomColor();
   
@@ -52,6 +77,7 @@ function generateRandomColor() {
     let cropMarks = document.querySelectorAll(".crop-line");
     let filledInIcons = document.querySelectorAll(".filled-icon");
     let inputsOnScreen = document.querySelectorAll("input");
+    let inputsOnScreenBorderColor ;
     
     const textColor = getTextColor(bgColor);
     
@@ -83,17 +109,16 @@ function generateRandomColor() {
       filledInIcons[y].style.fill = textColor;
     };
 
-    // Changes border color of all inputs .... Maybe there is a better way
-    // for(x=0; x<inputsOnScreen.length; x++) {
-    //   inputsOnScreen[x].style.border = `2px solid ${textColor}`;
-    //   inputsOnScreen[x].style.color = `${textColor}`;
-    // };
-
-    // Changes border color an inside content of all inputs
+    // Changes border color of all inputs
     for(q=0; q<inputsOnScreen.length; q++) {
-      console.log(inputsOnScreen[q]);
-      // add if statement witch will iterate over all inputs and style them acordingly.
-      inputsOnScreen[q].style.filter = "invert(100%) sepia(25%) saturate(0%) hue-rotate(180deg) brightness(100%) contrast(100%)";
+      // Gets property value "border-color" from input
+      inputsOnScreenBorderColor = getComputedStyle(inputsOnScreen[q]).getPropertyValue("border-color");
+
+      // Checks if border color and text color march, if they dont it switches colors to match text.
+      if (inputsOnScreenBorderColor !== convertToRGB(textColor)) {
+        // console.log(`the colors didnt match not match but were fixed`);
+        inputsOnScreen[q].style.filter = "invert(100%) sepia(25%) saturate(0%) hue-rotate(180deg) brightness(100%) contrast(100%)";
+      }
     }
 
     document.body.style.color = textColor;
@@ -102,3 +127,4 @@ function generateRandomColor() {
   document.querySelector("button").addEventListener("click", roll);
   
   roll();
+  // ::::: Function that triggers color change :::::
