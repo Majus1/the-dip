@@ -358,6 +358,9 @@ body {
   gap: 16px;
   width: 100%;
 }
+.date-and-time input {
+  height: 56px;
+}
 .date-and-time h1,
 .date-and-time p {
   padding: 0px;
