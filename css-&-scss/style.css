@@ -58,7 +58,6 @@
 
 button {
   border: none;
-  padding: 1em;
   background-color: rgba(var(--black), 0.75);
   font-size: 18px;
   font-family: "pp_neue_montrealmedium";
