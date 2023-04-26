@@ -414,13 +414,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    // flex-grow: 1;
     gap: 4px;
     width: 100%;
     .dnt-forum {
         display: flex;
         justify-content: center;
-        // flex-grow: 1;
         gap: 16px;
         width: 100%;
     }
@@ -695,38 +693,38 @@ body {
 // // ::: Work out side crop marks :::
 
 // // ::: Work out top crop marks :::
-.top-crop-mark {
-    animation: vertical-top-crop-mark-wrapper 2.5s linear;
-    animation-iteration-count: infinite;
-}
-@keyframes vertical-top-crop-mark-wrapper {
-    0% {
-        top: 0px;
-    }
-    50% {
-        top: 16px;
-    }
-    100% {
-        top: 0px;
-    }
-}
+// .top-crop-mark {
+//     animation: vertical-top-crop-mark-wrapper 2.5s linear;
+//     animation-iteration-count: infinite;
+// }
+// @keyframes vertical-top-crop-mark-wrapper {
+//     0% {
+//         top: 0px;
+//     }
+//     50% {
+//         top: 16px;
+//     }
+//     100% {
+//         top: 0px;
+//     }
+// }
 // // ::: Work out top crop marks :::
 
 // // ::: Work out bottom crop marks :::
-.bottom-crop-mark {
-    animation: vertical-bottom-crop-mark-wrapper 2.5s linear;
-    animation-iteration-count: infinite;
-}
-@keyframes vertical-bottom-crop-mark-wrapper {
-    0% {
-        bottom: 0px;
-    }
-    50% {
-        bottom: 16px;
-    }
-    100% {
-        bottom: 0px;
-    }
-}
+// .bottom-crop-mark {
+//     animation: vertical-bottom-crop-mark-wrapper 2.5s linear;
+//     animation-iteration-count: infinite;
+// }
+// @keyframes vertical-bottom-crop-mark-wrapper {
+//     0% {
+//         bottom: 0px;
+//     }
+//     50% {
+//         bottom: 16px;
+//     }
+//     100% {
+//         bottom: 0px;
+//     }
+// }
 // // ::: Work out bottom crop marks :::
 // ::::: Animations :::::
