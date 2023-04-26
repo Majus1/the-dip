@@ -105,7 +105,7 @@
 // ::::: Input styling :::::
 button {
     border: none;
-    // padding: 1em;
+    padding: 1em;
     background-color: rgba($color: var(--black), $alpha: .75);
     font-size: 18px;
     font-family: 'pp_neue_montrealmedium';
@@ -386,7 +386,6 @@ body {
     height: 100vh;
     .start-button {
         display: flex;
-        flex-grow: 1;
         align-items: center;
         justify-content: center;
         gap: 4px;
@@ -403,7 +402,6 @@ body {
 .start-button-wrapper {
     display: flex;
     width: 100%;
-    flex-grow: 1;
 }
 
 .date-and-time-tittle-wrapper {

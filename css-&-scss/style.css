@@ -58,6 +58,7 @@
 
 button {
   border: none;
+  padding: 1em;
   background-color: rgba(var(--black), 0.75);
   font-size: 18px;
   font-family: "pp_neue_montrealmedium";
@@ -317,7 +318,6 @@ body {
 }
 .date-and-time-option .start-button {
   display: flex;
-  flex-grow: 1;
   align-items: center;
   justify-content: center;
   gap: 4px;
@@ -334,7 +334,6 @@ body {
 .start-button-wrapper {
   display: flex;
   width: 100%;
-  flex-grow: 1;
 }
 
 .date-and-time-tittle-wrapper h1 {
