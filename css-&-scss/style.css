@@ -314,7 +314,6 @@ body {
   align-items: center;
   gap: 24px;
   padding: 0 24px;
-  height: 100vh;
 }
 .date-and-time-option .start-button {
   display: flex;
@@ -323,12 +322,6 @@ body {
   gap: 4px;
   width: 100%;
   border-radius: 24px;
-}
-.date-and-time-option .top-crop-mark {
-  padding-top: 24px;
-}
-.date-and-time-option .bottom-crop-mark {
-  padding-bottom: 24px;
 }
 
 .start-button-wrapper {

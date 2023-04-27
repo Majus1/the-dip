@@ -383,7 +383,6 @@ body {
     align-items: center;
     gap: 24px;
     padding: 0 24px;
-    height: 100vh;
     .start-button {
         display: flex;
         align-items: center;
@@ -391,12 +390,6 @@ body {
         gap: 4px;
         width: 100%;
         border-radius: 24px;
-    }
-    .top-crop-mark {
-        padding-top: 24px;
-    }
-    .bottom-crop-mark {
-        padding-bottom: 24px;
     }
 }
 .start-button-wrapper {
