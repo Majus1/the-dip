@@ -313,6 +313,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 24px;
+  height: 722px;
   padding: 0 24px;
 }
 .date-and-time-option .start-button {
@@ -327,6 +328,7 @@ body {
 .start-button-wrapper {
   display: flex;
   width: 100%;
+  flex-grow: 1;
 }
 
 .date-and-time-tittle-wrapper h1 {
@@ -360,6 +362,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 24px;
+  height: 100vh;
   padding: 0 24px;
 }
 .workout-option .button-wrapper {
