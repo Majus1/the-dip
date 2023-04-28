@@ -462,7 +462,7 @@ body {
     justify-content: center;
     gap: 24px;
     .small-workout-icon-wrapper {
-        padding-top: 48px;
+        padding-top: 24px;
     }
 }
 
@@ -472,6 +472,7 @@ body {
     flex-grow: 1;
     gap: 24px;
     justify-content: center;
+    align-items: center;
 }
 
 .current-workout-input-section {

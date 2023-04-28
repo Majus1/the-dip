@@ -388,7 +388,7 @@ body {
   gap: 24px;
 }
 .workout-header .small-workout-icon-wrapper {
-  padding-top: 48px;
+  padding-top: 24px;
 }
 
 .workout-content {
@@ -397,6 +397,7 @@ body {
   flex-grow: 1;
   gap: 24px;
   justify-content: center;
+  align-items: center;
 }
 
 .current-workout-input-section {
