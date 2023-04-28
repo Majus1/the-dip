@@ -362,7 +362,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  height: 100vh;
+  height: 722px;
   padding: 0 24px;
 }
 .workout-option .button-wrapper {
@@ -388,7 +388,7 @@ body {
   gap: 24px;
 }
 .workout-header .small-workout-icon-wrapper {
-  padding-top: 24px;
+  padding-top: 48px;
 }
 
 .workout-content {
