@@ -102,7 +102,7 @@ input:focus {
   color: var(--type-color-white);
 }
 
-input::-moz-placeholder {
+input::-moz-placeholder, input[type=date]::-moz-placeholder, input[type=time]::-moz-placeholder {
   color: var(--type-color-black);
   font-size: 16px;
   font-family: "pp_neue_montrealbook";
@@ -111,7 +111,9 @@ input::-moz-placeholder {
   transition: color 0.5s;
 }
 
-input::placeholder {
+input::placeholder,
+input[type=date]::placeholder,
+input[type=time]::placeholder {
   color: var(--type-color-black);
   font-size: 16px;
   font-family: "pp_neue_montrealbook";
