@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css-&-scss/style.css">
+    <title>03_leg-workout</title>
+</head>
+<body>
+    <div class="content-wrapper-dip workout-option">
+
+        <!-- ::::: Workout header :::: -->
+        <div class="workout-header">
+            <!-- ::: Small workout icon ::: -->
+            <div class="small-workout-icon-wrapper">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="filled-icon" d="M0 24.0777L21.7559 2.24133L21.778 2.21914L23.9889 0L48 24.0777L44.9489 27.1401L26.0672 8.21082V48H21.7559V8.36616L3.05113 27.1401L0 24.0777Z" fill="black"/>
+                </svg>
+            </div>
+            <!-- ::: Small workout icon ::: -->
+        </div>
+        <!-- ::::: Workout header :::: -->
+
+        <!-- :::: Workout content ::::: -->
+        <div class="workout-content">
+
+            <!-- ::: Previous workout ::: -->
+            <div class="previous-workout">
+                <p class="body-1">Previously on...</p>
+                <h1 class="display-6">RO. DEADLIFT</h1>
+                <!-- Previous workout -->
+                <div class="previous-stats body-1">
+                </div>
+                <!-- Previous workout -->
+                <!-- Section crop marks -->
+                <div class="section-crop-marks">
+                    <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+                    </svg>
+                    <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+                    </svg>
+                </div>
+                <!-- Section crop marks -->
+            </div>
+            <!-- ::: Previous workout ::: -->
+
+            <!-- ::: Simple crop mark ::: -->
+            <svg width="2" height="24" viewBox="0 0 2 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M1 0V24" stroke="black" stroke-width="2"/>
+            </svg>
+            <!-- ::: Simple crop mark ::: -->
+
+            <!-- ::: Weight & Reps section ::: -->
+            <div class="current-workout-input-section">
+                <h1 class="display-6">Weight & Reps</h1>
+                <div class="wnr-forum">
+                    <input type="number" id="exercise-weight" name="exercise-weight" placeholder="Enter weight" required>
+                    <input type="number" id="exercise-reps" name="exercise-reps" placeholder="Enter reps" required>
+                </div>
+                <p class="body-1">Current set details</p>
+            </div>
+            <!-- ::: Weight & Reps section ::: -->
+
+            <!-- ::: Simple crop mark ::: -->
+            <svg width="2" height="24" viewBox="0 0 2 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M1 0V24" stroke="black" stroke-width="2"/>
+            </svg>
+            <!-- ::: Simple crop mark ::: -->
+        
+            <!-- ::: Current workout ::: -->
+            <div class="current-workout">
+                <p class="body-1">Current workout progress...</p>
+                <h1 class="display-6">RO. DEADLIFT</h1>
+                <!-- Current workout -->
+                <div class="current-stats body-1">
+                </div>
+                <!-- Current workout -->
+                <!-- Section crop marks -->
+                <div class="section-crop-marks">
+                    <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+                    </svg>
+                    <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+                    </svg>
+                </div>
+                <!-- Section crop marks -->
+            </div>
+            <!-- ::: Previous workout ::: -->
+
+            <!-- ::: Simple crop mark ::: -->
+            <svg width="2" height="24" viewBox="0 0 2 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M1 0V24" stroke="black" stroke-width="2"/>
+            </svg>
+            <!-- ::: Simple crop mark ::: -->
+            
+        </div>
+        <!-- :::: Workout content ::::: -->
+
+        <!-- ::::: Button wrapper ::::: -->
+        <div class="button-wrapper">
+
+            <!-- ::: Save reps button ::: -->
+            <button id="save-reps-button">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_188_1275" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="25">
+                    <rect y="0.333984" width="24" height="24" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_188_1275)">
+                    <path d="M14 21.334V13.334H22V21.334H14ZM16 19.334H20V15.334H16V19.334ZM2 18.334V16.334H11V18.334H2ZM14 11.334V3.33398H22V11.334H14ZM16 9.33398H20V5.33398H16V9.33398ZM2 8.33398V6.33398H11V8.33398H2Z" fill="#1C1B1F"/>
+                    </g>
+                </svg>
+                SAVE REPS
+            </button>
+            <!-- ::: Save reps button ::: -->
+
+            <!-- ::: Finish workout button ::: -->
+            <button id="finish-button" onclick="window.location.href = 'finish-screen.html';"">
+                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_134_1277" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                    <rect width="24" height="24"/>
+                    </mask>
+                    <g mask="url(#mask0_134_1277)">
+                    <path d="M9.52505 17.9998L20.125 7.3998L18.7001 5.9998L9.50005 15.1748L5.27505 10.9248L3.85005 12.3498L9.52505 17.9998ZM9.52505 20.8248L1.05005 12.3498L5.27505 8.0998L9.52505 12.3498L18.6751 3.1748L22.975 7.3748L9.52505 20.8248Z" fill="white"/>
+                    </g>
+                </svg>
+                FINISHED
+            </button>
+            <!-- ::: Finish workout button ::: -->
+
+        </div>
+        <!-- ::::: Button wrapper ::::: -->
+
+    </div> 
+
+    <!-- <canvas id="gradient-canvas" data-transition-in /></canvas> -->
+    <!-- ::::: Scripts ::::: -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
+    <!-- <script src="js/Gradient.js"></script> -->
+    <script src="../js/changin-background-color.js"></script>
+    <!-- ::::: Scripts ::::: -->
+</body>
+</html>
