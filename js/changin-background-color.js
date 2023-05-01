@@ -1,5 +1,5 @@
 // Basic console log stattement
-console.log("Background changer is linked");
+// console.log("Background changer is linked");
 // Basic console log stattement
 
 
