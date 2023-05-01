@@ -14,9 +14,10 @@ $("#save-reps-button").click(function () {
     let exerciseWeight = $("#exercise-weight").val();
     if (reps.length === 0) {
         $(".current-stats").append('<p className="previous-weight"><span>' + exerciseWeight + '</span>kg</p>');
-    } else if (reps.length > 9) {
-        window.alert("Dude chill!");
-    }
+    } 
+    // else if (reps.length > 9) {
+    //     window.alert("Dude chill!");
+    // }
     $(".current-stats").append('<p class="previous-rep rep-01">' + exerciseReps + '</p>');
     reps.push(parseInt(exerciseReps));
 });
@@ -64,8 +65,8 @@ let activeWorkout= {
 // ::: Variables :::
 
 /*
-- Check what type of Exercise is selected based on page tittle
-- Once Exercise type is seleced ads the coresponding exercises
+- Check what type of Exercise is selected based on page tittle.
+- Once Exercise type is seleced ads initial content.
 */
 
 if (workoutType==="01_push-workout") {
@@ -73,30 +74,37 @@ if (workoutType==="01_push-workout") {
     // Nested object that hold all exercises data.
     let addedExercises = {
         squat: {
+            display_name: "SQUAT",
             weight: "_",
             reps: "_"
         },
         hack_squat: {
+            display_name: "HACK SQUAT",
             weight: "_",
             reps: "_"
         },
         lateral_raises: {
+            display_name: "LATERAL RAISES",
             weight: "_",
             reps: "_"
         },
         incline_bench_press: {
+            display_name: "IN. BENCH",
             weight: "_",
             reps: "_"
         },
         tricep_rope_extension: {
+            display_name: "TRICEP R. EXT",
             weight: "_",
             reps: "_"
         },
         skull_crusher: {
+            display_name: "SKULL CRUSHER",
             weight: "_",
             reps: "_"
         },
         peck_deck_fly: {
+            display_name: "PECK DECK FLY",
             weight: "_",
             reps: "_"
         },
@@ -108,35 +116,43 @@ if (workoutType==="01_push-workout") {
     // Ads workout type under the workout_type property 
     activeWorkout.workout_type = "01_push-workout";
 
+
 } else if (workoutType==="02_pull-workout") {
 
     // Nested object that hold all exercises data.
     let addedExercises = {
         ro_deadlifts: {
+            display_name: "RO. DEADLIFT",
             weight: "_",
             reps: "_"
         },
         pendlay_row: {
+            display_name: "PENDALY ROW",
             weight: "_",
             reps: "_"
         },
         pull_up: {
+            display_name: "PULL UP",
             weight: "_",
             reps: "_"
         },
         short_cable_row: {
+            display_name: "SHORT CABLE ROW",
             weight: "_",
             reps: "_"
         },
         hammer_curls: {
+            display_name: "HAMMER CURLS",
             weight: "_",
             reps: "_"
         },
         cable_curls_bs: {
+            display_name: "CABLE CURLS BS",
             weight: "_",
             reps: "_"
         },
         pull_down_n_g: {
+            display_name: "PULL DOWN N-GRIP",
             weight: "_",
             reps: "_"
         },
@@ -153,30 +169,37 @@ if (workoutType==="01_push-workout") {
     // Nested object that hold all exercises data.
     let addedExercises = {
         front_squat: {
+            display_name: "FRONT SQUAT",
             weight: "_",
             reps: "_"
         },
         quad_ext: {
+            display_name: "QUAD EX.",
             weight: "_",
             reps: "_"
         },
         incline_dumb_p: {
+            display_name: "INCLINE DU: PRESS",
             weight: "_",
             reps: "_"
         },
         later_raises_s: {
+            display_name: "LA. C. RAISES",
             weight: "_",
             reps: "_"
         },
         tricep_ext_e: {
+            display_name: "TRICEP EX. EL.",
             weight: "_",
             reps: "_"
         },
         cable_chest_fl: {
+            display_name: "CABLE CHEST FLY",
             weight: "_",
             reps: "_"
         },
         dips: {
+            display_name: "DIPS",
             weight: "_",
             reps: "_"
         },
@@ -193,30 +216,37 @@ if (workoutType==="01_push-workout") {
     // Nested object that hold all exercises data.
     let addedExercises = {
         pull_downs: {
+            display_name: "PULL DOWNS",
             weight: "_",
             reps: "_"
         },
         pull_up_n_2DS: {
+            display_name: "PULL UP N. 2DS",
             weight: "_",
             reps: "_"
         },
         machine_curls_s: {
+            display_name: "MACHINE C. CURLS",
             weight: "_",
             reps: "_"
         },
         rev_peck_deck: {
+            display_name: "RE. PECK DECK FLY",
             weight: "_",
             reps: "_"
         },
         rope_curls_obe_roki_1DS: {
+            display_name: "ROPE CURLS 1DS B. H.",
             weight: "_",
             reps: "_"
         },
         hamstring_curls: {
+            display_name: "HAMSTRING CURLS",
             weight: "_",
             reps: "_"
         },
         lunges: {
+            display_name: "LUNGES",
             weight: "_",
             reps: "_"
         },
@@ -240,43 +270,259 @@ if (workoutType==="01_push-workout") {
 
 function pushWorkoutFlow() {
 
-    activeWorkout.counter += 1;
+    if (activeWorkout.counter === 0) {
 
-    if (activeWorkout.counter <= 4) {
+        /** Makes initial content appear.
+         * Select the previous-workout section.
+         * Enters initial contetn based on exercise.
+         * Adds 1+ to counter
+         */
+        let previousWorkoutSection = document.querySelector(".previous-workout");
+        previousWorkoutSection.innerHTML = 
+        `<p class="body-1">Previously on...</p>
+        <h1 class="display-6">${activeWorkout.exercises.squat.display_name}</h1>
+        <!-- Previous workout -->
+        <div class="previous-stats body-1">
+        </div>
+        <!-- Previous workout -->
+        <!-- Section crop marks -->
+        <div class="section-crop-marks">
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+        </div>
+        <!-- Section crop marks -->`
+
+        activeWorkout.counter += 1;
+    }
+
+    else if (activeWorkout.counter <= 4 && activeWorkout.counter != 0) {
         // Exercise selected: SQUAT
         console.log(`Current count ${activeWorkout.counter} curently adding data to SQUAT exercise`);
 
         /** Here is where data for reps and sets will be added for SQUAT */
+
+        /** Changes content of previous-workout section.
+         * Select the previous-workout section.
+         * Enters corect contetn based on exercise.
+         * Adds 1+ to counter
+         */
+        let previousWorkoutSection = document.querySelector(".previous-workout");
+        previousWorkoutSection.innerHTML = 
+        `<p class="body-1">Previously on...</p>
+        <h1 class="display-6">${activeWorkout.exercises.squat.display_name}</h1>
+        <!-- Previous workout -->
+        <div class="previous-stats body-1">
+        </div>
+        <!-- Previous workout -->
+        <!-- Section crop marks -->
+        <div class="section-crop-marks">
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+        </div>
+        <!-- Section crop marks -->`
+
+        activeWorkout.counter += 1;
+
     } else if (activeWorkout.counter >= 4 && activeWorkout.counter <= 7) {
         // Exercise selected: HACK SQUAT
         console.log(`Current count ${activeWorkout.counter} curently adding data to HACK SQUAT exercise`);
 
         /** Here is where data for reps and sets will be added for HACK SQUAT */
+
+        /** Changes content of previous-workout section.
+         * Select the previous-workout section.
+         * Enters corect contetn based on exercise.
+         * Ads +1 to counter
+         */
+        let previousWorkoutSection = document.querySelector(".previous-workout");
+        previousWorkoutSection.innerHTML = 
+        `<p class="body-1">Previously on...</p>
+        <h1 class="display-6">${activeWorkout.exercises.hack_squat.display_name}</h1>
+        <!-- Previous workout -->
+        <div class="previous-stats body-1">
+        </div>
+        <!-- Previous workout -->
+        <!-- Section crop marks -->
+        <div class="section-crop-marks">
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+        </div>
+        <!-- Section crop marks -->`
+
+        activeWorkout.counter += 1;
+
     } else if (activeWorkout.counter >= 7 && activeWorkout.counter <= 11) {
         // Exercise selected: LATERAL RAISES
         console.log(`Current count ${activeWorkout.counter} curently adding data to LATERAL RAISES exercise`);
 
         /** Here is where data for reps and sets will be added for LATERAL RAISES */
+
+        /** Changes content of previous-workout section.
+         * Select the previous-workout section.
+         * Enters corect contetn based on exercise.
+         * Ads +1 to counter
+         */
+        let previousWorkoutSection = document.querySelector(".previous-workout");
+        previousWorkoutSection.innerHTML = 
+        `<p class="body-1">Previously on...</p>
+        <h1 class="display-6">${activeWorkout.exercises.lateral_raises.display_name}</h1>
+        <!-- Previous workout -->
+        <div class="previous-stats body-1">
+        </div>
+        <!-- Previous workout -->
+        <!-- Section crop marks -->
+        <div class="section-crop-marks">
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+        </div>
+        <!-- Section crop marks -->`
+
+        activeWorkout.counter += 1;
+        
     } else if (activeWorkout.counter >= 11 && activeWorkout.counter <= 14) {
         // Exercise selected: INCLINE BENCH PRESS
         console.log(`Current count ${activeWorkout.counter} curently adding data to INCLINE BENCH PRESS exercise`);
 
         /** Here is where data for reps and sets will be added for INCLINE BENCH PRESS */
+
+        /** Changes content of previous-workout section.
+         * Select the previous-workout section.
+         * Enters corect contetn based on exercise.
+         * Ads +1 to counter
+         */
+        let previousWorkoutSection = document.querySelector(".previous-workout");
+        previousWorkoutSection.innerHTML = 
+        `<p class="body-1">Previously on...</p>
+        <h1 class="display-6">${activeWorkout.exercises.incline_bench_press.display_name}</h1>
+        <!-- Previous workout -->
+        <div class="previous-stats body-1">
+        </div>
+        <!-- Previous workout -->
+        <!-- Section crop marks -->
+        <div class="section-crop-marks">
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+        </div>
+        <!-- Section crop marks -->`
+
+        activeWorkout.counter += 1;
+
     } else if (activeWorkout.counter >= 14 && activeWorkout.counter <= 18) {
         // Exercise selected: TRICEP ROPE EXENSION
         console.log(`Current count ${activeWorkout.counter} curently adding data to TRICEP ROPE EXENSION exercise`);
 
         /** Here is where data for reps and sets will be added for TRICEP ROPE EXENSION */
+
+        /** Changes content of previous-workout section.
+         * Select the previous-workout section.
+         * Enters corect contetn based on exercise.
+         * Ads +1 to counter
+         */
+        let previousWorkoutSection = document.querySelector(".previous-workout");
+        previousWorkoutSection.innerHTML = 
+        `<p class="body-1">Previously on...</p>
+        <h1 class="display-6">${activeWorkout.exercises.tricep_rope_extension.display_name}</h1>
+        <!-- Previous workout -->
+        <div class="previous-stats body-1">
+        </div>
+        <!-- Previous workout -->
+        <!-- Section crop marks -->
+        <div class="section-crop-marks">
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+        </div>
+        <!-- Section crop marks -->`
+
+        activeWorkout.counter += 1;
+
     } else if (activeWorkout.counter >= 18 && activeWorkout.counter <= 22) {
         // Exercise selected: SKULL CRUSHER
         console.log(`Current count ${activeWorkout.counter} curently adding data to SKULL CRUSHER exercise`);
 
         /** Here is where data for reps and sets will be added for SKULL CRUSHER */
+
+        /** Changes content of previous-workout section.
+         * Select the previous-workout section.
+         * Enters corect contetn based on exercise.
+         * Ads +1 to counter
+         */
+        let previousWorkoutSection = document.querySelector(".previous-workout");
+        previousWorkoutSection.innerHTML = 
+        `<p class="body-1">Previously on...</p>
+        <h1 class="display-6">${activeWorkout.exercises.skull_crusher.display_name}</h1>
+        <!-- Previous workout -->
+        <div class="previous-stats body-1">
+        </div>
+        <!-- Previous workout -->
+        <!-- Section crop marks -->
+        <div class="section-crop-marks">
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+        </div>
+        <!-- Section crop marks -->`
+
+        activeWorkout.counter += 1;
+
     } else if (activeWorkout.counter >= 22 && activeWorkout.counter <= 25) {
         // Exercise selected: PECK DECK FLY
         console.log(`Current count ${activeWorkout.counter} curently adding data to PECK DECK FLY exercise`);
 
         /** Here is where data for reps and sets will be added for PECK DECK FLY */
+
+        /** Changes content of previous-workout section.
+         * Select the previous-workout section.
+         * Enters corect contetn based on exercise.
+         * Ads +1 to counter
+         */
+        let previousWorkoutSection = document.querySelector(".previous-workout");
+        previousWorkoutSection.innerHTML = 
+        `<p class="body-1">Previously on...</p>
+        <h1 class="display-6">${activeWorkout.exercises.peck_deck_fly.display_name}</h1>
+        <!-- Previous workout -->
+        <div class="previous-stats body-1">
+        </div>
+        <!-- Previous workout -->
+        <!-- Section crop marks -->
+        <div class="section-crop-marks">
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+        </div>
+        <!-- Section crop marks -->`
+
+        activeWorkout.counter += 1;
+
     } else if (activeWorkout.counter > 25) {
         // Workout finished statement
         console.log(`Push workout has been completed`);
@@ -471,6 +717,10 @@ function secondPullWorkoutFlow() {
 let saveRepsBtn = document.querySelector("#save-reps-button");
 // ::: Variables :::
 
+/** Keeps trachk of workout type
+ * Makes inital content appear
+ */
+
 /** Keeps track of on witch workout and witch set and rep we are */
 function keepTrack() {
     // If statement check type of workout and adds coresponding workoutflow function.
@@ -491,4 +741,8 @@ function keepTrack() {
 
 /** Activates the keepTrack function once button is pressed */
 saveRepsBtn.addEventListener("click", keepTrack);
+
+// Activates keepTrack() on load. This displays initial content
+keepTrack()
+
 // ::::: Exercise tracker :::::
