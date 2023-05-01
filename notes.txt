@@ -1,0 +1,4 @@
+Questions for lang
+
+- Should I replace the "current-workout-input-section" as well as the others?
+- How can you make inputs gather data inside an object?

@@ -273,7 +273,7 @@ function pushWorkoutFlow() {
     if (activeWorkout.counter === 0) {
 
         /** Makes initial content appear.
-         * Select the previous-workout section.
+         * Select the previous-workout & current-workout section.
          * Enters initial contetn based on exercise.
          * Adds 1+ to counter
          */
@@ -296,6 +296,25 @@ function pushWorkoutFlow() {
         </div>
         <!-- Section crop marks -->`
 
+        let currentWorkoutSection = document.querySelector(".current-workout");
+        currentWorkoutSection.innerHTML = 
+        `<p class="body-1">Current workout progress...</p>
+        <h1 class="display-6">${activeWorkout.exercises.squat.display_name}</h1>
+        <!-- Current workout -->
+        <div class="current-stats body-1">
+        </div>
+        <!-- Current workout -->
+        <!-- Section crop marks -->
+        <div class="section-crop-marks">
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+        </div>
+        <!-- Section crop marks -->`
+
         activeWorkout.counter += 1;
     }
 
@@ -306,7 +325,7 @@ function pushWorkoutFlow() {
         /** Here is where data for reps and sets will be added for SQUAT */
 
         /** Changes content of previous-workout section.
-         * Select the previous-workout section.
+         * Select the previous-workout & current-workout section.
          * Enters corect contetn based on exercise.
          * Adds 1+ to counter
          */
@@ -329,6 +348,25 @@ function pushWorkoutFlow() {
         </div>
         <!-- Section crop marks -->`
 
+        let currentWorkoutSection = document.querySelector(".current-workout");
+        currentWorkoutSection.innerHTML = 
+        `<p class="body-1">Current workout progress...</p>
+        <h1 class="display-6">${activeWorkout.exercises.squat.display_name}</h1>
+        <!-- Current workout -->
+        <div class="current-stats body-1">
+        </div>
+        <!-- Current workout -->
+        <!-- Section crop marks -->
+        <div class="section-crop-marks">
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+        </div>
+        <!-- Section crop marks -->`
+
         activeWorkout.counter += 1;
 
     } else if (activeWorkout.counter >= 4 && activeWorkout.counter <= 7) {
@@ -338,7 +376,7 @@ function pushWorkoutFlow() {
         /** Here is where data for reps and sets will be added for HACK SQUAT */
 
         /** Changes content of previous-workout section.
-         * Select the previous-workout section.
+         * Select the previous-workout & current-workout section.
          * Enters corect contetn based on exercise.
          * Ads +1 to counter
          */
@@ -361,6 +399,25 @@ function pushWorkoutFlow() {
         </div>
         <!-- Section crop marks -->`
 
+        let currentWorkoutSection = document.querySelector(".current-workout");
+        currentWorkoutSection.innerHTML = 
+        `<p class="body-1">Current workout progress...</p>
+        <h1 class="display-6">${activeWorkout.exercises.hack_squat.display_name}</h1>
+        <!-- Current workout -->
+        <div class="current-stats body-1">
+        </div>
+        <!-- Current workout -->
+        <!-- Section crop marks -->
+        <div class="section-crop-marks">
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+        </div>
+        <!-- Section crop marks -->`
+
         activeWorkout.counter += 1;
 
     } else if (activeWorkout.counter >= 7 && activeWorkout.counter <= 11) {
@@ -370,7 +427,7 @@ function pushWorkoutFlow() {
         /** Here is where data for reps and sets will be added for LATERAL RAISES */
 
         /** Changes content of previous-workout section.
-         * Select the previous-workout section.
+         * Select the previous-workout & current-workout section.
          * Enters corect contetn based on exercise.
          * Ads +1 to counter
          */
@@ -393,6 +450,25 @@ function pushWorkoutFlow() {
         </div>
         <!-- Section crop marks -->`
 
+        let currentWorkoutSection = document.querySelector(".current-workout");
+        currentWorkoutSection.innerHTML = 
+        `<p class="body-1">Current workout progress...</p>
+        <h1 class="display-6">${activeWorkout.exercises.lateral_raises.display_name}</h1>
+        <!-- Current workout -->
+        <div class="current-stats body-1">
+        </div>
+        <!-- Current workout -->
+        <!-- Section crop marks -->
+        <div class="section-crop-marks">
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+        </div>
+        <!-- Section crop marks -->`
+
         activeWorkout.counter += 1;
         
     } else if (activeWorkout.counter >= 11 && activeWorkout.counter <= 14) {
@@ -402,7 +478,7 @@ function pushWorkoutFlow() {
         /** Here is where data for reps and sets will be added for INCLINE BENCH PRESS */
 
         /** Changes content of previous-workout section.
-         * Select the previous-workout section.
+         * Select the previous-workout & current-workout section.
          * Enters corect contetn based on exercise.
          * Ads +1 to counter
          */
@@ -425,6 +501,25 @@ function pushWorkoutFlow() {
         </div>
         <!-- Section crop marks -->`
 
+        let currentWorkoutSection = document.querySelector(".current-workout");
+        currentWorkoutSection.innerHTML = 
+        `<p class="body-1">Current workout progress...</p>
+        <h1 class="display-6">${activeWorkout.exercises.incline_bench_press.display_name}</h1>
+        <!-- Current workout -->
+        <div class="current-stats body-1">
+        </div>
+        <!-- Current workout -->
+        <!-- Section crop marks -->
+        <div class="section-crop-marks">
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+        </div>
+        <!-- Section crop marks -->`
+
         activeWorkout.counter += 1;
 
     } else if (activeWorkout.counter >= 14 && activeWorkout.counter <= 18) {
@@ -434,7 +529,7 @@ function pushWorkoutFlow() {
         /** Here is where data for reps and sets will be added for TRICEP ROPE EXENSION */
 
         /** Changes content of previous-workout section.
-         * Select the previous-workout section.
+         * Select the previous-workout & current-workout section.
          * Enters corect contetn based on exercise.
          * Ads +1 to counter
          */
@@ -457,6 +552,25 @@ function pushWorkoutFlow() {
         </div>
         <!-- Section crop marks -->`
 
+        let currentWorkoutSection = document.querySelector(".current-workout");
+        currentWorkoutSection.innerHTML = 
+        `<p class="body-1">Current workout progress...</p>
+        <h1 class="display-6">${activeWorkout.exercises.tricep_rope_extension.display_name}</h1>
+        <!-- Current workout -->
+        <div class="current-stats body-1">
+        </div>
+        <!-- Current workout -->
+        <!-- Section crop marks -->
+        <div class="section-crop-marks">
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+        </div>
+        <!-- Section crop marks -->`
+
         activeWorkout.counter += 1;
 
     } else if (activeWorkout.counter >= 18 && activeWorkout.counter <= 22) {
@@ -466,7 +580,7 @@ function pushWorkoutFlow() {
         /** Here is where data for reps and sets will be added for SKULL CRUSHER */
 
         /** Changes content of previous-workout section.
-         * Select the previous-workout section.
+         * Select the previous-workout & current-workout section.
          * Enters corect contetn based on exercise.
          * Ads +1 to counter
          */
@@ -489,6 +603,25 @@ function pushWorkoutFlow() {
         </div>
         <!-- Section crop marks -->`
 
+        let currentWorkoutSection = document.querySelector(".current-workout");
+        currentWorkoutSection.innerHTML = 
+        `<p class="body-1">Current workout progress...</p>
+        <h1 class="display-6">${activeWorkout.exercises.skull_crusher.display_name}</h1>
+        <!-- Current workout -->
+        <div class="current-stats body-1">
+        </div>
+        <!-- Current workout -->
+        <!-- Section crop marks -->
+        <div class="section-crop-marks">
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+        </div>
+        <!-- Section crop marks -->`
+
         activeWorkout.counter += 1;
 
     } else if (activeWorkout.counter >= 22 && activeWorkout.counter <= 25) {
@@ -498,7 +631,7 @@ function pushWorkoutFlow() {
         /** Here is where data for reps and sets will be added for PECK DECK FLY */
 
         /** Changes content of previous-workout section.
-         * Select the previous-workout section.
+         * Select the previous-workout & current-workout section.
          * Enters corect contetn based on exercise.
          * Ads +1 to counter
          */
@@ -510,6 +643,25 @@ function pushWorkoutFlow() {
         <div class="previous-stats body-1">
         </div>
         <!-- Previous workout -->
+        <!-- Section crop marks -->
+        <div class="section-crop-marks">
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+            <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="crop-line" d="M0 1.5L20.5 1.5" stroke="black" stroke-width="2"/>
+            </svg>
+        </div>
+        <!-- Section crop marks -->`
+
+        let currentWorkoutSection = document.querySelector(".current-workout");
+        currentWorkoutSection.innerHTML = 
+        `<p class="body-1">Current workout progress...</p>
+        <h1 class="display-6">${activeWorkout.exercises.peck_deck_fly.display_name}</h1>
+        <!-- Current workout -->
+        <div class="current-stats body-1">
+        </div>
+        <!-- Current workout -->
         <!-- Section crop marks -->
         <div class="section-crop-marks">
             <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
