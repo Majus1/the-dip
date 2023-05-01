@@ -1,10 +1,12 @@
 let reps = [];
 
 
+
 $(".start-button").click(function () {
     localStorage.setItem('current-workout-date', $("#workout-date").val());
     localStorage.setItem('current-workout-time', $("#workout-time").val());
 });
+
 
 
 $("#save-reps-button").click(function () {
@@ -20,6 +22,7 @@ $("#save-reps-button").click(function () {
 });
 
 
+
 $("#finish-button").click(function () {
     let workoutDate = localStorage.getItem('current-workout-date');
     let workoutTime = localStorage.getItem('current-workout-time');
@@ -31,6 +34,7 @@ $("#finish-button").click(function () {
         repetitions: reps
     }));
 });
+
 
 
 $(window).on("load", function () {
@@ -47,55 +51,52 @@ $(window).on("load", function () {
 });
 
 
-// ::::: Variables :::::
 
-// Workout type
+// ::::: Exercise type :::::
+
+// ::::: Variables :::::
 let workoutType = document.title;
 let activeWorkout= {
     workout_type: "_",
-    exercises: {}
+    exercises: {},
+    counter: 0
 };
-
 // ::::: Variables :::::
 
+/*
+- Check what type of Exercise is selected based on page tittle
+- Once Exercise type is seleced ads the coresponding exercises
+*/
 
-// ::::: Exercise type :::::
 if (workoutType==="01_push-workout") {
 
     // Nested object that hold all exercises data.
     let addedExercises = {
         squat: {
-            counter: 0,
             weight: "_",
             reps: "_"
         },
         hack_squat: {
-            counter: 0,
             weight: "_",
             reps: "_"
         },
         lateral_raises: {
-            counter: 0,
             weight: "_",
             reps: "_"
         },
         incline_bench_press: {
-            counter: 0,
             weight: "_",
             reps: "_"
         },
         tricep_rope_extension: {
-            counter: 0,
             weight: "_",
             reps: "_"
         },
         skull_crusher: {
-            counter: 0,
             weight: "_",
             reps: "_"
         },
         peck_deck_fly: {
-            counter: 0,
             weight: "_",
             reps: "_"
         },
@@ -108,10 +109,143 @@ if (workoutType==="01_push-workout") {
     activeWorkout.workout_type = "01_push-workout";
 
 } else if (workoutType==="02_pull-workout") {
-    console.log(`This is a ${workoutType} exercise`);
+
+    // Nested object that hold all exercises data.
+    let addedExercises = {
+        ro_deadlifts: {
+            weight: "_",
+            reps: "_"
+        },
+        pendlay_row: {
+            weight: "_",
+            reps: "_"
+        },
+        pull_up: {
+            weight: "_",
+            reps: "_"
+        },
+        short_cable_row: {
+            weight: "_",
+            reps: "_"
+        },
+        hammer_curls: {
+            weight: "_",
+            reps: "_"
+        },
+        cable_curls_bs: {
+            weight: "_",
+            reps: "_"
+        },
+        pull_down_n_g: {
+            weight: "_",
+            reps: "_"
+        },
+    };
+
+    // Ads contents of addedExercises to exercises property of activeWorkout object
+    Object.assign(activeWorkout.exercises, addedExercises);
+
+    // Ads workout type under the workout_type property 
+    activeWorkout.workout_type = "02_pull-workout";
+
 } else if (workoutType==="03_leg-workout") {
-    console.log(`This is a ${workoutType} exercise`);
+    
+    // Nested object that hold all exercises data.
+    let addedExercises = {
+        front_squat: {
+            weight: "_",
+            reps: "_"
+        },
+        quad_ext: {
+            weight: "_",
+            reps: "_"
+        },
+        incline_dumb_p: {
+            weight: "_",
+            reps: "_"
+        },
+        later_raises_s: {
+            weight: "_",
+            reps: "_"
+        },
+        tricep_ext_e: {
+            weight: "_",
+            reps: "_"
+        },
+        cable_chest_fl: {
+            weight: "_",
+            reps: "_"
+        },
+        dips: {
+            weight: "_",
+            reps: "_"
+        },
+    };
+
+    // Ads contents of addedExercises to exercises property of activeWorkout object
+    Object.assign(activeWorkout.exercises, addedExercises);
+
+    // Ads workout type under the workout_type property 
+    activeWorkout.workout_type = "03_leg-workout";
+
 } else if (workoutType==="04_pull-workout") {
-    console.log(`This is a ${workoutType} exercise`);
+    
+    // Nested object that hold all exercises data.
+    let addedExercises = {
+        pull_downs: {
+            weight: "_",
+            reps: "_"
+        },
+        pull_up_n_2DS: {
+            weight: "_",
+            reps: "_"
+        },
+        machine_curls_s: {
+            weight: "_",
+            reps: "_"
+        },
+        rev_peck_deck: {
+            weight: "_",
+            reps: "_"
+        },
+        rope_curls_obe_roki_1DS: {
+            weight: "_",
+            reps: "_"
+        },
+        hamstring_curls: {
+            weight: "_",
+            reps: "_"
+        },
+        lunges: {
+            weight: "_",
+            reps: "_"
+        },
+    };
+
+    // Ads contents of addedExercises to exercises property of activeWorkout object
+    Object.assign(activeWorkout.exercises, addedExercises);
+
+    // Ads workout type under the workout_type property 
+    activeWorkout.workout_type = "03_leg-workout";
 }
 // ::::: Exercise type :::::
+
+
+
+// ::::: Exercise tracker :::::
+
+// ::::: Variables :::::
+let saveRepsBtn = document.querySelector("#save-reps-button");
+// ::::: Variables :::::
+
+/** Keeps track of on witch workout and witch set and rep we are */
+function keepTrack() {
+    console.log(`Current count is ${activeWorkout.counter}`);
+    console.log(`Adding +1 to counter`);
+    activeWorkout.counter += 1;
+}
+keepTrack()
+
+/** Activates the keepTrack function once button is pressed */
+saveRepsBtn.addEventListener("click", keepTrack);
+// ::::: Exercise tracker :::::
