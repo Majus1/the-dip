@@ -315,7 +315,6 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  height: 698px;
   padding: 0 24px;
 }
 .date-and-time-option .start-button {
