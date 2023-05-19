@@ -3,8 +3,13 @@ let reps = [];
 
 
 $(".start-button").click(function () {
+    // When the element with class "start-button" is clicked, this function will be executed.
     localStorage.setItem('current-workout-date', $("#workout-date").val());
     localStorage.setItem('current-workout-time', $("#workout-time").val());
+
+    // The above lines store values in the localStorage.
+    // The value of the input field with ID "workout-date" is stored with the key 'current-workout-date'.
+    // The value of the input field with ID "workout-time" is stored with the key 'current-workout-time'.
 });
 
 
@@ -25,8 +30,11 @@ $("#save-reps-button").click(function () {
 
 
 $("#finish-button").click(function () {
+    // When the element with ID "finish-button" is clicked, this function will be executed.
     let workoutDate = localStorage.getItem('current-workout-date');
     let workoutTime = localStorage.getItem('current-workout-time');
+
+    // The above lines retrieve values from the localStorage and the input field with ID "exercise-weight".
     let exerciseWeight = $("#exercise-weight").val();
     localStorage.setItem($(".display-3").text(), JSON.stringify({
         date: workoutDate,
@@ -34,16 +42,34 @@ $("#finish-button").click(function () {
         weight: exerciseWeight,
         repetitions: reps
     }));
+    // The above line stores an object in the localStorage. The object contains properties like date, time, weight, and repetitions.
+    // The key for this object is obtained from the text content of an element with class "display-3".
 });
 
 
 
 $(window).on("load", function () {
-    if (window.location.pathname === "/the-dip/the-workout.html") {
+    // When the window has finished loading, this function will be executed.
+
+    // Check if the current page's path is "/the-dip/the-workout.html"
+    if (window.location.pathname === "/workout-types/01_push-workout.html"
+    || window.location.pathname === "/workout-types/02_pull-workout.html"
+    || window.location.pathname === "/workout-types/03_leg-workout.html"
+    || window.location.pathname === "/workout-types/04_pull-workout.html") {
+
+        // Retrieve the value stored in the localStorage using the key obtained from the text content of an element with class "display-3".
         let previousWorkoutStr = localStorage.getItem($(".display-3").text());
+
+        // Check if a value is retrieved from the localStorage.
         if (previousWorkoutStr !== null) {
+
+            // Parse the retrieved value (assumed to be a JSON string) into an object.
             let previousWorkout = JSON.parse(previousWorkoutStr);
+
+            // Append a new paragraph element to an element with class "previous-stats". The paragraph contains the weight value from the previous workout.
             $(".previous-stats").append('<p class="previous-weight"><span>' + previousWorkout.weight + '</span>kg</p>');
+
+            // Append new paragraph elements to an element with class "previous-stats". Each paragraph contains a number from the repetitions array of the previous workout.
             previousWorkout.repetitions.forEach(function (number) {
                 $(".previous-stats").append('<p class="previous-rep rep-01">' + number + '</p>');
             });
